@@ -1,0 +1,34 @@
+- Wondered about flags
+- Shown on a pole
+ * Should be legible
+- Five Rules
+---
+- San Marino
+- KISS
+---
+- Meaningful Symbolism
+- 
+---
+- Dominica
+- Complicated
+ * Color
+ * Details
+---
+- Saudi Arabia
+- Name Tag
+---
+- Poland & Indonesia
+- Be Related
+---
+- Libya
+- [x]Name
+- []Color
+- []Symbolic
+- [x]KISS
+- []Related
+---
+- HSNU
+- []Name
+- [x]Color
+- [x]Symbolic
+- []KISS
