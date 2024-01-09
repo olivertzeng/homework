@@ -35,8 +35,8 @@ struct MOTOR_PINS
 
 std::vector<MOTOR_PINS> motorPins = 
 {
-  {18, 19},  //設定馬達1腳位
-  {22, 23},  //設定馬達2腳位
+  {19, 18},  //設定馬達1腳位
+  {23, 22},  //設定馬達2腳位
 };
 Servo servo1;//宣告Servo 名稱
 Servo servo2;//宣告Servo 名稱
@@ -44,7 +44,7 @@ int serov1pin=25,serov2pin=26;//設定伺服馬達1與2的腳位
 int s1_ang0=0,s2_ang0=0;//設定伺服馬達1與2的初始角度
 int s1_ang=90,s2_ang=90;//設定伺服馬達1與2的開啟角度
 
-const char* ssid     = "I Use Arch BTW";//設定wifi名稱(英文限定)
+const char* ssid     = "Bruh";//設定wifi名稱(英文限定)
 const char* password = "89648964";//設定wifi密碼(8字以上)
 
 AsyncWebServer server(80);
@@ -214,7 +214,7 @@ void setup(void)
   servo2.write(s2_ang0);
   setUpPinModes();
   Serial.begin(115200);
-  int channel=6;//設定wifi頻道1~11
+  int channel=9;//設定wifi頻道1~11
   WiFi.softAP(ssid, password, channel);
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
