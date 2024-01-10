@@ -35,25 +35,25 @@ const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
   </head>
   <body class="noselect" align="center" style="background-color:white">
      
-    <h1 style="color: teal;text-align:center;">Mobile Controller</h1> <!--設定標題-->
-    <h2 style="color: teal;text-align:center;">Make Sure You're On Mobile!</h2> <!--副標題-->
+    <h1 style="color: teal;text-align:center;">HSNU</h1> <!--設定標題-->
+    <h2 style="color: teal;text-align:center;">Wi-Fi &#128663; Control</h2> <!--副標題-->
     
     <table id="mainTable" style="width:400px;margin:auto;table-layout:fixed" CELLSPACING=10>
       <tr>
         <td ontouchstart='onTouchStartAndEnd("5")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11017;</span></td>
-        <td ontouchstart='onTouchStartAndEnd("3")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8679;</span></td>
+        <td ontouchstart='onTouchStartAndEnd("1")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8679;</span></td>
         <td ontouchstart='onTouchStartAndEnd("6")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11016;</span></td>
       </tr>
       
       <tr>
-        <td ontouchstart='onTouchStartAndEnd("1")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8678;</span></td>
+        <td ontouchstart='onTouchStartAndEnd("3")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8678;</span></td>
         <td></td>    
         <td ontouchstart='onTouchStartAndEnd("4")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8680;</span></td>
       </tr>
       <tr>
-        <td ontouchstart='onTouchStartAndEnd("8")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11019;</span></td>
+        <td ontouchstart='onTouchStartAndEnd("7")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11019;</span></td>
         <td ontouchstart='onTouchStartAndEnd("2")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#8681;</span></td>
-        <td ontouchstart='onTouchStartAndEnd("7")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11018;</span></td>
+        <td ontouchstart='onTouchStartAndEnd("8")' ontouchend='onTouchStartAndEnd("0")'><span class="arrows" >&#11018;</span></td>
       </tr>
        </table>
       <table id="mainTable" style="width:400px;margin:auto;table-layout:fixed" CELLSPACING=10>
@@ -97,3 +97,4 @@ const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
   </body>
 </html> 
 )HTMLHOMEPAGE";                           
+
