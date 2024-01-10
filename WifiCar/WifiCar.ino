@@ -16,8 +16,6 @@
 #define DOWN_RIGHT 8
 #define SERVO1_FIRST 9
 #define SERVO1_SECOND 10
-#define SERVO2_FIRST 11
-#define SERVO2_SECOND 12
 #define STOP 0
 
 #define FRONT_RIGHT_MOTOR 0
@@ -39,12 +37,11 @@ std::vector<MOTOR_PINS> motorPins =
   {22, 23},  //設定馬達2腳位
 };
 Servo servo1;//宣告Servo 名稱
-Servo servo2;//宣告Servo 名稱
-int serov1pin=25,serov2pin=26;//設定伺服馬達1與2的腳位
+int serov1pin=25;//設定伺服馬達1與2的腳位
 int s1_ang0=0,s2_ang0=0;//設定伺服馬達1與2的初始角度
 int s1_ang=90,s2_ang=90;//設定伺服馬達1與2的開啟角度
 
-const char* ssid     = "I Use Arch BTW";//設定wifi名稱(英文限定)
+const char* ssid     = "I Use Linux BTW";//設定wifi名稱(英文限定)
 const char* password = "89648964";//設定wifi密碼(8字以上)
 
 AsyncWebServer server(80);
@@ -127,15 +124,6 @@ void processCarMovement(String inputValue)
       servo1.write(s1_ang);//指定SERVO1轉到設定角度
       break;
 
-    case SERVO2_FIRST:
-       servo2.write(s2_ang0);//指定SERVO2轉到初始角度
-      
-      break;
-  
-    case SERVO2_SECOND:
-      servo2.write(s2_ang); //指定SERVO2轉到設定角度
-      break;
-  
     case STOP:
       rotateMotor(FRONT_RIGHT_MOTOR, STOP);
       rotateMotor(FRONT_LEFT_MOTOR, STOP);
@@ -209,12 +197,10 @@ void setUpPinModes()
 void setup(void) 
 {
   servo1.attach(serov1pin);
-  servo2.attach(serov2pin);
   servo1.write(s1_ang0);
-  servo2.write(s2_ang0);
   setUpPinModes();
   Serial.begin(115200);
-  int channel=6;//設定wifi頻道1~11
+  int channel=4;//設定wifi頻道1~11
   WiFi.softAP(ssid, password, channel);
   IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
