@@ -1,0 +1,3 @@
+[submodule "crcproject"]
+	path = crcproject
+	url = git@github.com:hsnucrc46/crcproject
