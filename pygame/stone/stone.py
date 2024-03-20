@@ -1,5 +1,5 @@
 # Copyright (c) 2024 Oliver Tzeng. All Rights Reserved.
-# created: 24/03/06 13/38
+# created: 2024/03/06 13/38
 
 from random import randint
 from screeninfo import get_monitors
@@ -77,13 +77,14 @@ while playing:
         s.update()
         if s.pos_y >= height:
             stones.remove(s)
-        s.draw()
 
     # player
     player.update(pygame.key.get_pressed())
-    player.draw()
 
     screen.fill("white")
+    player.draw()
+    for s in stones:
+        s.draw()
     pygame.display.update()
     clock.tick(60)
 pygame.quit()
