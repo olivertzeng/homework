@@ -1,16 +1,16 @@
 import pygame
 from random import randint
-import settings
+from src import variables
 
 
 class rabbit:
 	def __init__(self, game):
 		self.game = game
-		self.pos_x = width * 0.45
-		self.pos_y = height * 0.75
+		self.pos_x = variables.width * 0.45
+		self.pos_y = variables.height * 0.75
 		self.speed_x = 50
 		self.direction_x = 0
-		self.irabbit = pygame.image.load('rabbit.png')
+		self.irabbit = pygame.image.load('src/rabbit.png')
 
 	def update(self, keys):
 		if keys[pygame.K_LEFT]:
@@ -23,8 +23,8 @@ class rabbit:
 		self.pos_x += self.direction_x * self.speed_x
 		if self.pos_x <= 0:
 			self.pos_x = 0
-		elif self.pos_x >= width - 100:
-			self.pos_x = width - 100
+		elif self.pos_x >= variables.width - 100:
+			self.pos_x = variables.width - 100
 
 	def draw(self):
 		self.game.screen.blit(self.irabbit, (self.pos_x, self.pos_y))
@@ -33,11 +33,11 @@ class rabbit:
 class stone:
 	def __init__(self, game):
 		self.game = game
-		self.pos_x = randint(0, width)
+		self.pos_x = randint(0, variables.width)
 		self.pos_y = -50
 		self.speed_y = 0
-		self.acceleration_y = 9.8 / pygame.time.Clock.get_fps(clock)
-		self.istone = pygame.image.load('stone.png')
+		self.acceleration_y = 9.8 / variables.fps
+		self.istone = pygame.image.load('src/stone.png')
 
 	def update(self):
 		self.speed_y += self.acceleration_y

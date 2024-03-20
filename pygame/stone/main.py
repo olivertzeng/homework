@@ -2,27 +2,23 @@
 # created: 2024/03/06 13/38
 
 from random import randint
-from screeninfo import get_monitors
-import sys, pygame
+import pygame
 
-sys.path.insert(0, 'src')
-
-import settings
-import sprites
+from src import variables, sprites
 
 class Game:
 	def __init__(self):
 		pygame.init()
 
-		self.screen = pygame.display.set_mode((width, height))
-		pygame.display.set_caption(caption)
+		self.screen = pygame.display.set_mode((variables.width, variables.height))
+		pygame.display.set_caption(variables.caption)
 
 		self.clock = pygame.time.Clock()
 		self.playing = True
 		self.last_spawn_stone = pygame.time.get_ticks()
 		self.stones = []
-		self.player = rabbit(self)
-	
+		self.player = sprites.rabbit(self)
+
 	def events(self):
 		for event in pygame.event.get():
 			match event.type:
@@ -31,19 +27,19 @@ class Game:
 
 	def update(self):
 
-		player.update(pygame.key.get_pressed())
+		self.player.update(pygame.key.get_pressed())
 
-		if pygame.time.get_ticks() - last_spawn_stone >= 1000:
-			self.stones.append(stone(self))
+		if pygame.time.get_ticks() - self.last_spawn_stone >= 1000:
+			self.stones.append(sprites.stone(self))
 			self.last_spawn_stone = pygame.time.get_ticks()
 
-		for s in stones:
+		for s in self.stones:
 			s.update()
-			if s.pos_y >= height:
+			if s.pos_y >= variables.height:
 				self.stones.remove(s)
 
 	def draw(self):
-		self.screen.fill(color)
+		self.screen.fill(variables.color)
 		self.player.draw()
 		for s in self.stones:
 			s.draw()
@@ -54,7 +50,7 @@ class Game:
 			self.events()
 			self.update()
 			self.draw()
-			self.clock.tick(fps)
+			self.clock.tick(variables.fps)
 
 game = Game()
 game.run()
