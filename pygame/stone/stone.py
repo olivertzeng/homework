@@ -17,6 +17,7 @@ clock = pygame.time.Clock()
 stones = []
 last_spawn_stone = pygame.time.get_ticks()
 
+
 class rabbit:
     def __init__(self):
         self.pos_x = width * 0.45
@@ -42,6 +43,7 @@ class rabbit:
     def draw(self):
         screen.blit(self.irabbit, (self.pos_x, self.pos_y))
 
+
 class stone:
     def __init__(self):
         self.pos_x = randint(0, width)
@@ -56,6 +58,7 @@ class stone:
 
     def draw(self):
         screen.blit(self.istone, (self.pos_x, self.pos_y))
+
 
 playing = True
 player = rabbit()
@@ -80,9 +83,8 @@ while playing:
     player.update(pygame.key.get_pressed())
     player.draw()
 
-    screen.fill("white") 
+    screen.fill("white")
     pygame.display.update()
     clock.tick(60)
 pygame.quit()
 quit()
-
