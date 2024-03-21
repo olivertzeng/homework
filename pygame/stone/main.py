@@ -3,15 +3,14 @@
 
 from random import randint
 import pygame
-
-from src import variables, sprites
+from src import lib, sprites
 
 class Game:
 	def __init__(self):
 		pygame.init()
 
-		self.screen = pygame.display.set_mode((variables.width, variables.height))
-		pygame.display.set_caption(variables.caption)
+		self.screen = pygame.display.set_mode((lib.width, lib.height))
+		pygame.display.set_caption(lib.caption)
 
 		self.clock = pygame.time.Clock()
 		self.playing = True
@@ -35,11 +34,14 @@ class Game:
 
 		for s in self.stones:
 			s.update()
-			if s.pos_y >= variables.height:
+			if self.lib.collision(self.player, s):
+				print("You Lost")
+				self.playing = False
+			if s.pos_y >= lib.height:
 				self.stones.remove(s)
 
 	def draw(self):
-		self.screen.fill(variables.color)
+		self.screen.fill(lib.color)
 		self.player.draw()
 		for s in self.stones:
 			s.draw()
@@ -50,7 +52,7 @@ class Game:
 			self.events()
 			self.update()
 			self.draw()
-			self.clock.tick(variables.fps)
+			self.clock.tick(lib.fps)
 
 game = Game()
 game.run()
