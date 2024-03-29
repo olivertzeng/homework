@@ -1,19 +1,24 @@
 import pygame, random
+from screeninfo import get_monitors
 from math import pi
 
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+width = get_monitors()[0].width
+height = get_monitors()[0].height
+screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("DVD ScreenSaver")
 
 colors = ("green", "red", "violet", "blue", "white", "cyan")
 color = colors[random.randint(0, len(colors) - 1)]
 
+
 def randcol(current):
     buf = colors[random.randint(0, len(colors) - 1)]
     while buf == current:
-    	buf = colors[random.randint(0, len(colors) - 1)]
+        buf = colors[random.randint(0, len(colors) - 1)]
     return buf
+
 
 dvd_x = dvd_y = 0
 direction_x = direction_y = 1
@@ -29,13 +34,13 @@ while playing:
     if dvd_x <= 0:
         direction_x = 1
         color = randcol(color)
-    elif dvd_x >= 680:
+    elif dvd_x >= width - 20:
         direction_x = -1
         color = randcol(color)
     if dvd_y <= 0:
         direction_y = 1
         color = randcol(color)
-    elif dvd_y >= 540:
+    elif dvd_y >= height - 60:
         direction_y = -1
         color = randcol(color)
     screen.fill("black")
