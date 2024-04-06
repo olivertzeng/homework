@@ -9,7 +9,7 @@
   poor asked him to
 * Extract 1 is a third-person news article informing readers about how people volunteer the
   poverty while Extract 2 expresess how he feels about the poverty, words like "painful", "
-  ugly", is used to discribe them.
+  ugly", is used to describe them.
 * They both mentioned about local markets, likely want to express about how those markets are
   closely related to those tent city.
-* They both mentioned
+* Extract 1 interviewed someone for their opinion while Extract 2 didn't.
