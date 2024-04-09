@@ -1,2 +1,2 @@
-According to the parrellel universe theory, since we have infinent amount of universes, is
+According to the parallel universe theory, since we have infinite amount of universes, is
 calculating the probability of events still necessary?
