@@ -19,4 +19,7 @@ Both Ben Ireland and Charles Dickens described how they helped the poor. However
 still some key differences between the two extracts. Firstly, the volunteers are eager to help,
 while Dickens helped the poor because the poor asked him to. Next, extract one tends to be positive
 about helping people out, even appreciating the poor being thankful after helping, but extract two
-just described the poor as an "ugly-object". 
+just described the poor as an "ugly-object". In Dickens' eyes, the poor is nothing but a devil,
+while Ireland thinks that they are "brave".
+
+There are many volunteers in extract one where there is only Dickens who helped the poor.
