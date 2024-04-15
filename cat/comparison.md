@@ -13,3 +13,10 @@
 * They both mentioned about local markets, likely want to express about how those markets are
   closely related to those tent city.
 * Extract 1 interviewed someone for their opinion while Extract 2 didn't.
+
+# Full Answer
+Both Ben Ireland and Charles Dickens described how they helped the poor. However, there are
+still some key differences between the two extracts. Firstly, the volunteers are eager to help,
+while Dickens helped the poor because the poor asked him to. Next, extract one tends to be positive
+about helping people out, even appreciating the poor being thankful after helping, but extract two
+just described the poor as an "ugly-object". 
