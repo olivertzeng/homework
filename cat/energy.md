@@ -12,7 +12,7 @@ and similarities between renewable energy and fossil fuels.
 
 ## Fossil Fules
 - Fossil fules is a kind of energy that is produced with unrenewable resources, which is a natural
-  resource that can't recovered in a short time. In other words, we may run out of fossil fules in
+  resource that can't be recovered in a short time. In other words, we may run out of fossil fules in
   the near future. Also, fossil fules may pollute the environment with carbon dioxide. Desptie it's
   disavantages to renewable energy, its cost is much less, and a power plant can be settled easier
   than renewable energy power plants.
