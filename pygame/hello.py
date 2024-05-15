@@ -18,8 +18,8 @@ clock = pygame.time.Clock()
 playing = True
 while playing:
     for event in pygame.event.get():
-    	if event.type == pygame.QUIT:
-        	playing = False
+        if event.type == pygame.QUIT:
+            playing = False
     pygame.draw.rect(gameDisplay, RED, pygame.Rect(100, 100, 50, 50))
     pygame.draw.circle(gameDisplay, GREEN, (200, 100), 25)
     pygame.draw.line(gameDisplay, BLUE, (300, 100), (300, 400))
