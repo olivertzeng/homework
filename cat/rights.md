@@ -18,5 +18,5 @@ United Nations Human Rights Office vs Amnesty International
 
     While there are these differences between them, there are some properties that they share in
     common. As mentioned above, their goal is to protect human rights. Next, they both are
-    international organizations, meaning that they serve every nearly every country on earth.
+    international organizations, meaning that they serve nearly every country on earth.
     Lastly, they both think that peace is the only solution for human beings.
