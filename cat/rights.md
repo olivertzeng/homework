@@ -8,7 +8,7 @@ United Nations Human Rights Office vs Amnesty International
     the same approaches, they still have some key differences between them.
 
     While the United Nations Human Rights Office is an official organization, Amnesty International
-    is in fact, an unofficial organizations, thus, the latter is much less restricted by political
+    is in fact, an unofficial organization, thus, the latter is much less restricted by political
     means and tensions between different countries than the former. For example, China had
     controversies about violating human rights in 2017 when they tortured muslims in Xinjiang.
     However, because of the consequences these countries will have to face if they go against China.
