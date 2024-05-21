@@ -16,4 +16,5 @@ Both of the cities have rich in history as well. For example, Taipei, or Taiwan 
 general have been ruled by the Dutch, the Tungnins, the Qing dynasty, and the Japanese. Prague on
 the other hand, has been ruled by the Germans, Soviets etc.
 
-To conclude, although there are still many
+To conclude, although there are still many obvious differences between these two cities, however the
+soules of culture in both cities is baked into all citizen's hearts and cannot be changed.
