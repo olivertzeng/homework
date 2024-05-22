@@ -3,9 +3,9 @@ using namespace std;
 
 int n, buf;
 vector<int> score;
-int main (int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
 	cin >> n;
-	while(n--){
+	while (n--) {
 		cin >> buf;
 		score.push_back(buf);
 	}
