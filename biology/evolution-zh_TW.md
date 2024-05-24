@@ -1,4 +1,4 @@
 This is the traditional Chinese version about the summary. For the English version please see
-[evolution.md]
+[evolution.md](https://github.com/olivertzeng/homework/blob/5da7a9efa0a1120f07ed5ffd0d20e02d2082a93a/biology/evolution.md?plain=1#L1)
 
 布豐是在1700年代的科學家以及啟蒙家。他當時不但蒐錄了包羅萬象的知識於百科全書內，還傳承了啟蒙者理性的精神，以科學的角度推測出生物的發展史，以及地球的起源。他認為地球早在七萬年就誕生了，比上世紀的人們的猜測遠高出十倍。後來更是提出生物大遷徙與演化的關聯。群集以及族群的形成，不是先天而是後天的結果。然而，即使他的假說不但欠缺證據，更是低估了地球的年紀，不過他對於科學界的影響的確功不可沒。他的貢獻，更是啟發百年後的著名生物學家─達爾文的墊腳石。最後在他們兩個的努力下，生物學又邁進了一大步。
