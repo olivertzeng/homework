@@ -17,4 +17,4 @@
   the other hand, has been ruled by the Germans, Soviets etc.
 
   To conclude, although there are still many obvious differences between these two cities, the
-  soules of culture in both cities is baked into all citizen's hearts and cannot be changed.
+  souls of culture in both cities is baked into all citizen's hearts and cannot be changed.
