@@ -1,11 +1,11 @@
 # Comparison between Taipei and Prague
-  Taipei and Prague are two of the well known cities in the world. In general, although it is easy to
-  identify between them, but it may be surprising for you to know about some special properties they
-  share in common. In short, both cities are rich cultural heritage, world economic cities, and have
-  diverse historical meanings.
+  Taipei and Prague are two of the well known cities in the world. In general, although it is easy
+  to identify between them, it may be surprising for you to know about some special properties they
+  share in common. In short, both cities have rich cultural heritage, world economic cities, and
+  have diverse historical meanings.
 
   One of the similarities is that both of the cities have rich in culture. Both of these cities have
-  an insane amount of different. For instance, there are the indigenous, the Hans, and the Taiwanese new
+  an insane amount of differences. For instance, there are the indigenous, the Hans, and the Taiwanese new
   immigrants' culture in Taipei. Or the Czech, Russians, Germans' culture in Prague.
 
   Another noticeable point that both of these two cities have in common is that both of them are global
