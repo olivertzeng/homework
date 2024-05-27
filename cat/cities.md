@@ -8,7 +8,7 @@
   an insane amount of differences. For instance, there are the indigenous, the Hans, and the Taiwanese new
   immigrants' culture in Taipei. Or the Czech, Russians, Germans' culture in Prague.
 
-  Another noticeable point that both of these two cities have in common is that both of them are global
+  Another noticeable point these two cities share in common is that they are well-known global
   economical cities. Because that both of them are capital cities, they have contributed to a large
   portion to the country's GDP.
 
