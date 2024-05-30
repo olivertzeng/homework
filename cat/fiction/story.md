@@ -7,8 +7,7 @@
 ## Main Idea
 
 Wright and his friend Miller Johnny accidentally traveled to the time of late 15th century in
-Italy
-for three days, which happened to be the time of the Renaissance.
+Italy for half of the day, which happened to be the time of the Renaissance.
 
 ## Main Story
 
@@ -41,7 +40,7 @@ for three days, which happened to be the time of the Renaissance.
     history teacher. "What are you doing here?" "And what's all about this weird stuff?" we
     questioned.
 
-    "Don't worry students, you'll only stay here for a day. Of course the time that has passed here
+    "Don't worry students, you'll only stay here until lunch time. Of course the time that has passed here
     doesn't effect the real world. After that I'll transfer you back to school. But you still have
     to finish your homework! Am I clear?"
 
@@ -55,13 +54,19 @@ for three days, which happened to be the time of the Renaissance.
     if I am willing to assist you two if I see them. I accepted this offer because I'm curious
     about what life will be in the 21th century." "You seem to be an expert to everything! Mind
     if I get to know who you are?" I asked. "My name is Leonardo da Vinci, who makes many kind
-    of sculptures, devotes in science, loves drawing, and mostly addicted to inventing new kinds of machines to make people's lives easier or increase productivity in everyday tasks." We were interested to what life is like during the Renaissance. "What do you do in your free time?" "I stream on Twitch!" "I watch videos on YouTube!" we shared modern technology like phones to him, as a return he introduced to the technology that he made by himself. Both of the generations enjoyed every moment we met with Da Vinci, it was a great time.
+    of sculptures, devotes in science, loves drawing, and mostly addicted to inventing new kinds of machines to make people's lives easier or increase productivity in everyday tasks." We were interested to what life is like during the Renaissance. "What do you do in your free time?" "I stream on Twitch!" "I watch videos on YouTube!" we shared modern technology like phones to him, as a return he introduced to the technology that he made by himself. Both of the generations enjoyed every moment we met with Davinci, it was a great time.
 
-    My stomach started to grumble. "I'm hungry" I argued. "Let's go to lunch!" Da Vinci
+    My stomach started to grumble. "I'm hungry" I argued. "Let's go have lunch!" Davinci
     suggested. He took us to a local restaurant that's not to far away from our place. It seems
-    that that restaurant is one of Da Vinci's favorite omakase. "Three people please!" After
+    that that restaurant is one of Davinci's favorite omakase. "Three people please!" After
     some time the waiter handed on the first dish. No wonder it's the food from the ancient I
     thought. "This is risotto, one of Italian's pride. It's mainly rice mixed with butter,
-    alcohol, and onions. It mostly comes with meat as well." Da Vinci introduced. After some
-    time we eventually finished the meal. I asked Da Vinci if he wants to take a picture with
-    us before we go
+    alcohol, and onions. It mostly comes with meat as well." Davinci introduced. After some
+    time we eventually finished the meal. Just right I want to take a picture with Davinci, I found
+    my phone missing. "Hey Davinci, what's the last time you've seen my phone?" "Silly boy, didn't
+    you notic that your current clothes looks a bit different from what you've worn before? That's
+    because your teacher told me that only the person him or herself will be transported, after
+    arriving the destination the transported person will automatically be wearing local clothes from
+    the destination. In other words, phones doesn't exist here."
+
+	"Have you finished your assignment?" A weird voice shown up out of nowhere. Just right when I thought that I could finally go back to the present world I heard "Oui! Wright! Have you finished your report about the Renaissance? You've been sleeping in class for a while."
