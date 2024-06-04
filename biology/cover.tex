@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Serif CJK TC}
+\usepackage{hyperref}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{ shapes.geometric }
+\usetikzlibrary{calc}
+\usepackage{anyfontsize}
+
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{tikzpicture}[remember picture,overlay]
+%%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%
+\fill[ForestGreen] (current page.south west) rectangle (current page.north east);
+
+\foreach \i in {2.5,...,22}
+{
+    \node[rounded corners,ForestGreen!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.west)+(2.5,-5)$) {} ;
+}
+
+%%%%%%%%%%%%%%%%%%%% Background Polygon %%%%%%%%%%%%%%%%%%%%
+\foreach \i in {0.5,...,22}
+{
+\node[rounded corners,ForestGreen!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north west)+(2.5,0)$) {} ;
+}
+
+\foreach \i in {0.5,...,22}
+{
+\node[rounded corners,ForestGreen!90,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north east)+(0,-9.5)$) {} ;
+}
+
+
+\foreach \i in {21,...,6}
+{
+\node[ForestGreen!85,rounded corners,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.south east)+(-0.2,-0.45)$) {} ;
+}
+
+
+%%%%%%%%%%%%%%%%%%%% Title of the Report %%%%%%%%%%%%%%%%%%%%
+\node[left,ForestGreen!5,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] at ($(current page.north east)+(0,-9.5)$)
+{
+{\fontsize{25}{30} \selectfont \bfseries 個人作業 3}
+};
+
+%%%%%%%%%%%%%%%%%%%% Subtitle %%%%%%%%%%%%%%%%%%%%
+\node[left,ForestGreen!10,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-11)$)
+{
+{\huge \textit{演化概念發展}}
+};
+
+%%%%%%%%%%%%%%%%%%%% Author Name %%%%%%%%%%%%%%%%%%%%
+\node[left,ForestGreen!5,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-13)$)
+{
+{\Large \textsc{曾嘉禾}}
+};
+
+%%%%%%%%%%%%%%%%%%%% Year %%%%%%%%%%%%%%%%%%%%
+\node[rounded corners,fill=ForestGreen!70,text =ForestGreen!5,regular polygon,regular polygon sides=6, minimum size=2.5 cm,inner sep=0,ultra thick] at ($(current page.west)+(2.5,-5)$) {\LARGE \bfseries 2024};
+
+\end{tikzpicture}
+
+\end{document}
