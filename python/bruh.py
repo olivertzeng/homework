@@ -29,5 +29,4 @@ for i in range(1, 10):
     rounded_square(100, 20)
     t.left(40)
 
-
 screen.mainloop()

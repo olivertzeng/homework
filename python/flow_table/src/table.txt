@@ -1,0 +1,5 @@
+A B B B BW
+B A A A B AW
+A B B B A A A AW
+A B B B A A A AW
+A B B B A B B B BW
