@@ -5,35 +5,7 @@
 	numbers=noenddot,
 ]{article}
 
-\usepackage{tikz}
-\usepackage{xeCJK}
-\usepackage{enumerate}
-\usepackage{tcolorbox}
-\usepackage[top=1.5cm, bottom=1.5cm, left=3cm, right=3cm]{geometry}
-\usepackage{hyperref}
-\tcbuselibrary{skins,breakable}
-\setCJKmainfont{Noto Serif CJK TC}
-   \usepackage{tikz,lipsum,tcolorbox}
-   \tcbuselibrary{skins,breakable}
-  \colorlet{colexam}{green!75!black}
-  \newtcolorbox{boxpar}[1]{
-empty,title=#1,attach boxed title to top left, boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
-       overlay={\draw[colexam,line width=2pt]
-         ([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
-     coltitle=colexam,fonttitle=\Large\bfseries,
-     before=\par\medskip\noindent,parbox=false,boxsep=0pt,left=0pt,right=3mm,top=4pt,
-     breakable,pad at break*=0mm,vfill before first,
-     overlay unbroken={\draw[colexam,line width=1pt]
-       ([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
-       --([xshift=-0.5pt]frame.south east)--(frame.south west); },
-     overlay first={\draw[colexam,line width=1pt]
-       ([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
-       --([xshift=-0.5pt]frame.south east); },
-     overlay middle={\draw[colexam,line width=1pt] ([xshift=-0.5pt]frame.north east)
-       --([xshift=-0.5pt]frame.south east); },
-     overlay last={\draw[colexam,line width=1pt] ([xshift=-0.5pt]frame.north east)
---([xshift=-0.5pt]frame.south east)--(frame.south west);}, }
-
+\usepackage{settings}
 \begin{document}
 \begin{large}
 \begin{titlepage}
