@@ -12,5 +12,4 @@ for f in ./**/*.tex; do
 	else
 		echo "Error: File not found: $filename"
 	fi
-	read -rp "Press Enter to continue..." _
 done
