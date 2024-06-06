@@ -4,7 +4,6 @@ for f in ./**/*.tex; do
 	filename=$(basename "$f")
 	echo "Now compiling $filename..."
 	echo
-	read -rp "Press Enter to continue..." _
 	cd "$(dirname "$f")" || return
 	pwd
 	if [ -f "$filename" ]; then
