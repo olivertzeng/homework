@@ -2,59 +2,9 @@
 \usepackage{settings}
 
 \begin{document}
-\pagestyle{empty}
+\hexcover{個人作業 3}{演化概念發展}{曾嘉禾}{Emerald}{2024}
 
-\begin{tikzpicture}[remember picture,overlay]
-%%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%
-\fill[Emerald] (current page.south west) rectangle (current page.north east);
-
-\foreach \i in {2.5,...,22}
-{
-    \node[rounded corners,Emerald!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.west)+(2.5,-5)$) {} ;
-}
-
-%%%%%%%%%%%%%%%%%%%% Background Polygon %%%%%%%%%%%%%%%%%%%%
-\foreach \i in {0.5,...,22}
-{
-\node[rounded corners,Emerald!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north west)+(2.5,0)$) {} ;
-}
-
-\foreach \i in {0.5,...,22}
-{
-\node[rounded corners,Emerald!90,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north east)+(0,-9.5)$) {} ;
-}
-
-
-\foreach \i in {21,...,6}
-{
-\node[Emerald!85,rounded corners,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.south east)+(-0.2,-0.45)$) {} ;
-}
-
-
-%%%%%%%%%%%%%%%%%%%% Title of the Report %%%%%%%%%%%%%%%%%%%%
-\node[left,Emerald!5,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] at ($(current page.north east)+(0,-9.5)$)
-{
-{\fontsize{25}{30} \selectfont \bfseries 個人作業 3}
-};
-
-%%%%%%%%%%%%%%%%%%%% Subtitle %%%%%%%%%%%%%%%%%%%%
-\node[left,Emerald!10,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-11)$)
-{
-{\huge \textit{演化概念發展}}
-};
-
-%%%%%%%%%%%%%%%%%%%% Author Name %%%%%%%%%%%%%%%%%%%%
-\node[left,Emerald!5,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-13)$)
-{
-{\Large \textsc{曾嘉禾}}
-};
-
-%%%%%%%%%%%%%%%%%%%% Year %%%%%%%%%%%%%%%%%%%%
-\node[rounded corners,fill=Emerald!70,text =Emerald!5,regular polygon,regular polygon sides=6, minimum size=2.5 cm,inner sep=0,ultra thick] at ($(current page.west)+(2.5,-5)$) {\LARGE \bfseries 2024};
-
-\end{tikzpicture}
-\newpage
-\begin{boxpar}[Emerald]{內文}
+\begin{boxpar}{Emerald}{內文}
 在生物學家對生物的演化史感到好奇前，人們為了要將生物分類，林奈在 1758 年創造了二名法，將每種生物以系統化的方式命名。這個發明讓後人更容易研究生物的特徵以及其演化史之間的關聯。
 
 「生物多樣性到底是怎麼形成的？為什麼世上有如此多種不同生物？」等問題是人們一直以來想解開的謎團。林奈的二名法雖然未直接揭開上述的謎底，但他的貢獻為後續的生物學研究奠定了基礎。
