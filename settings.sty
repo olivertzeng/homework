@@ -118,6 +118,15 @@
     --([xshift=-0.5pt]frame.south east)--(frame.south west);},
 }
 
+\newtcolorbox{textbox}[2]{
+    colback=white!95!#2,
+    colframe=black,
+    fonttitle=\bfseries,
+    title={\bfseries #1},
+    sharp corners,
+    breakable,
+}
+
 \newtcblisting{mintbox}[3]{%
     colback=#2!5,colframe=#2!50!black,listing only,
     title={\bfseries #1}, fonttitle=\bfseries,
