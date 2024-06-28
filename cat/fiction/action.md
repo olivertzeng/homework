@@ -18,3 +18,10 @@ not to get close to him. "He is an enemy to all mankind, but since he has earthi
 can defeat him, including me as well." "Well, what does that mean to me? Do you expect me to use my
 new earth… earthics to defeat him?" The man walked away, while looking back smiling at Maxwell like
 that Maxwell will beat him.
+
+Maxwell was surprised about this ability that the man gave. He practiced for a while and took on a
+trip after that. He beated different enimies sent by Lester and finally the final boss has met
+Maxwell.
+
+Lester stood on the streets and said, "You've finally come, I see a worthy opponent. Come, see how
+no one can ever beat me" "You must be sure of that." Maxwell said.
