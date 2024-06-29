@@ -25,3 +25,5 @@ Maxwell.
 
 Lester stood on the streets and said, "You've finally come, I see a worthy opponent. Come, see how
 no one can ever beat me" "You must be sure of that." Maxwell said.
+
+Finally Maxwell beated Lester within his inhereted abilities and lives happily ever for after.
