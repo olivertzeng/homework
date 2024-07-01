@@ -24,6 +24,8 @@ trip after that. He beated different enimies sent by Lester and finally the fina
 Maxwell.
 
 Lester stood on the streets and said, "You've finally come, I see a worthy opponent. Come, see how
-no one can ever beat me" "You must be sure of that." Maxwell said.
+no one can ever beat me" "You must be sure of that." Maxwell said. He first raised his fists to
+prepare to take the enemy down, exhaled air into his lungs, and finally broke some rocks from the
+ground to try to shoot the enemy using his earthings ability.
 
 Finally Maxwell beated Lester within his inhereted abilities and lives happily ever for after.
