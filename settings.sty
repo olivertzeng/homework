@@ -86,6 +86,9 @@
 \newpage
 }
 
+\newtcolorbox[blend into=figures]{imgbox}[2][]{float=htb,capture=hbox,
+blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
+
 \newtcolorbox{boxpar}[2]{%
   empty,
   title=#2,
