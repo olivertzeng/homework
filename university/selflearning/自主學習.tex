@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{../../settings}
+
+\begin{document}
+\hexcover{Py 心寫程式}{學習歷程}{作者：曾嘉禾}{Dandelion}{電算社}
+
+\begin{large}
+\begin{boxpar}{Dandelion}{說明}
+利用 Python 寫出像樣的遊戲
+\end{boxpar}
+\begin{boxpar}{Dandelion}{動機}
+雖然我有在寫程式，但常常好奇在那個黑盒子外還可以用程式寫出其他很酷的應用，很經典的例子就是遊戲。一直以來，我更是好奇程式是如何處理視窗、按鈕、元件等等的圖形化介面的項目。來到師大附中博覽會，看到電算社能夠利用python
+的 pygame
+做成各式各樣好玩遊戲的樣子尤其感到羨慕。所以這次為了圓夢以及完成擔任電算社靜態展的義務，決定與組員以
+pygame 寫出像樣的遊戲，花點心思懷抱與追求自己的夢想。
+\end{boxpar}
+    \begin{boxpar}{Dandelion}{學習過程}
+        在學習 pygame 的剛開始，接觸到的最基本的 pygame 程式碼後驚訝的發現竟然有 while true:
+        的危險程式，但後來才知道只要讓程式碼有條件地退出就不會產生太多問題
+        \begin{mintbox}{範例程式碼}{Dandelion}{python}
+# Example file showing a basic pygame "game loop"
+import pygame
+
+# pygame setup
+pygame.init()
+screen = pygame.display.set_mode((1280, 720))
+clock = pygame.time.Clock()
+running = True
+
+while running:
+    # poll for events
+    # pygame.QUIT event means the user clicked X to close your window
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # fill the screen with a color to wipe away anything from last frame
+    screen.fill("purple")
+
+    # RENDER YOUR GAME HERE
+
+    # flip() the display to put your work on screen
+    pygame.display.flip()
+
+    clock.tick(60)  # limits FPS to 60
+
+pygame.quit()
+        \end{mintbox}
+    \end{boxpar}
+\begin{boxpar}{遇到的問題}{Dandelion}
+
+\end{boxpar}
+\end{large}
+\end{document}

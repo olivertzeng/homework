@@ -121,25 +121,16 @@ blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
     --([xshift=-0.5pt]frame.south east)--(frame.south west);},
 }
 
-\newtcolorbox{textbox}[3][]{enhanced,skin=enhancedlast jigsaw,
-attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
-fonttitle=\bfseries\sffamily,varwidth boxed title=0.7\linewidth,
-colbacktitle=#2!45!white,colframe=#3!50!black,
-interior style={top color=#2!10!white,bottom color=#3!10!white},
-boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
-underlay boxed title={
-\fill[#2!45!white] (title.north west) -- (title.north east)
--- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
--- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
--- (title.south west) -- cycle;
-\fill[#2!45!white!50!black] ([yshift=-0.5mm]frame.north west)
--- +(-0.4,0) -- +(0,-0.3) -- cycle;
-\fill[#2!45!white!50!black] ([yshift=-0.5mm]frame.north east)
--- +(0,-0.3) -- +(0.4,0) -- cycle; },
-title={#1}}
-
 \newtcblisting{mintbox}[3]{%
     colback=#2!5,colframe=#2!50!black,listing only,
     title={\bfseries #1}, fonttitle=\bfseries,
     listing engine=minted, minted language=#3
+}
+
+\newtcolorbox{colbox}[2]{
+  colback=#1,
+  colframe=#1,
+  title=#2,
+  fonttitle=\bfseries,
+  sharp corners
 }

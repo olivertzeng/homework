@@ -19,15 +19,16 @@ stations["ktwo"] = set(["taipei", "taoyuan", "yilan"])
 stations["kthree"] = set(["kaoshung", "pingtung", "taitung"])
 stations["kfour"] = set(["nantou", "taichung", "taipei", "hualian", "yunlin"])
 stations["kfive"] = set(["taipei", "hualian", "yilan"])
+stations["kbroke"] = set([])
 
 results = set()
 best_result = None
 cities_covered = set()
 while cities_needed:
     for station, cities_for_station in stations.items():
-        covered = cities_needed & cities_for_station # set intersection of the sets
+        covered = cities_needed & cities_for_station  # set intersection of the sets
 
-        if len(covered) > len(cities_covered): # if true overrides old record
+        if len(covered) > len(cities_covered):  # if true overrides old record
             best_result = station
             cities_covered = covered
 
