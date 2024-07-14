@@ -7,7 +7,7 @@
 \usepackage{enumerate}
 \usepackage{fontspec}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[colorlinks]{hyperref}
 \usepackage{lmodern}
 \usepackage{minted}
 \usepackage{tabularx}
@@ -18,7 +18,7 @@
 \usetikzlibrary{shapes.geometric}
 \usemintedstyle{gruvbox-light}
 \setminted{
-  fontsize=\small,
+  fontsize=\regular,
   breaklines,
   autogobble,
   linenos,
@@ -92,10 +92,11 @@ blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
 \newtcolorbox{boxpar}[2]{%
   empty,
   title=#2,
-  attach boxed title to top left,
-  boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
-    overlay={\draw[#1,line width=2pt]
-      ([yshift=-1pt]frame.north west)--([yshift=-1pt]frame.north east);}},
+  attach boxed title to top left={yshift=1pt},
+boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
+  overlay={\draw[#1,line width=2pt]
+      ([yshift=\dimexpr\ht\textbox+\baselineskip\relax-1pt]frame.south
+      west)--([yshift=\dimexpr\ht\textbox+\baselineskip\relax-1pt]frame.south east);}},
   coltitle=#1,
   fonttitle=\Large\bfseries,
   before=\par\medskip\noindent,
@@ -108,10 +109,10 @@ blend before title code={\fbox{##1}\ },title={#2},every float=\centering,#1}
   pad at break*=0mm,
   vfill before first,
   overlay unbroken={\draw[#1,line width=1pt]
-    ([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+    ([yshift=-\tcboxedtitleheight-1pt]title.north east)--([xshift=-0.5pt,yshift=-\tcboxedtitleheight-1pt]title.north-|frame.east)
     --([xshift=-0.5pt]frame.south east)--(frame.south west); },
   overlay first={\draw[#1,line width=1pt]
-    ([yshift=-1pt]title.north east)--([xshift=-0.5pt,yshift=-1pt]title.north-|frame.east)
+    ([yshift=-\tcboxedtitleheight-1pt]title.north east)--([xshift=-0.5pt,yshift=-\tcboxedtitleheight-1pt]title.north-|frame.east)
     --([xshift=-0.5pt]frame.south east); },
   overlay middle={\draw[#1,line width=1pt]
     ([xshift=-0.5pt]frame.north east)

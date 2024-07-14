@@ -16,7 +16,8 @@ pygame 寫出像樣的遊戲，花點心思懷抱與追求自己的夢想。
 \end{boxpar}
     \begin{boxpar}{Dandelion}{學習過程}
         在學習 pygame 的剛開始，接觸到的最基本的 pygame 程式碼後驚訝的發現竟然有 while true:
-        的危險程式，但後來才知道只要讓程式碼有條件地退出就不會產生太多問題
+        的危險程式，但後來才知道只要讓程式碼有條件地退出就不會產生太多問題，所以在寫
+        pygame 程式時小心一點就不用擔心。
         \begin{mintbox}{範例程式碼}{Dandelion}{python}
 # Example file showing a basic pygame "game loop"
 import pygame
@@ -47,8 +48,28 @@ while running:
 pygame.quit()
         \end{mintbox}
     \end{boxpar}
-\begin{boxpar}{遇到的問題}{Dandelion}
 
+    \newpage
+\begin{boxpar}{Dandelion}{遇到的問題：不清楚 pygame.display}
+一開始常常遇到的問題就是 pyagme.display 的管理。因為 GUI
+    遊戲需要處理圖形並顯示在畫面上，所以管理顯示器的 pygame.display
+    就相當重要。不過身為初學者常常因為不熟悉 pygame.display
+    的運作方式而常常導致圖形在顯示器上錯位。
+    \begin{boxpar}{Dandelion}{解決方式}
+        查詢 Documentation 是最簡單的解決方式。身為未來想當程式設計師的我，必須要學習如何閱讀
+        Documentation。因為有時在問別人問題或放棄之前，其實已經有人在網路上早就解答過了。當時我有去
+        \href{https://www.pygame.org/docs/ref/display.html}{pygame 官網} 查詢，更是去
+        \href{https://www.youtube.com/watch?v=C8YtdC8mxTU}{YouTube 上}
+        查詢影片。在種種的查詢下，我也逐漸得知 framerate fps
+        或是其他視窗管理功能的對應 pygame
+        程式碼。完全熟悉他們後，我對我自己所下的功夫感到大有成就感。
+    \end{boxpar}
+\end{boxpar}
+\begin{boxpar}{Dandelion}{遇到的問題：組員之間無法溝通}
+    身為一位電算社靜態展學術長，組員之間的溝通以及進度分配是十分重要的。一開始，因為溝通不足而導致自己誤會組員耍賴不做事。但經過一次次的線上討論與會議以及釐清每位組員的個別需求後發現其實組員是肯認真工作的。最後發現我與組員逐漸的打成一片，是一件極為幸福的事情。
+\end{boxpar}
+\begin{boxpar}{Dandelion}{結尾}
+    在這次的自主學習，我發現寫程式一直以來不是一個人的事，是大家的事。所以未來如果我有參與其他活動也會盡力的與組員有良好的溝通並且共同完成目標。
 \end{boxpar}
 \end{large}
 \end{document}
