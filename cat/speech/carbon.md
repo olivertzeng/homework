@@ -6,7 +6,7 @@ to automatic machine production. However, this new change has also affected the 
 being exposed to the atmosphere, thus posing some problems for the globe. You'll now see for yourself
 how humans have largely impacted the environment in recent years. Firstly, carbon dioxide, water vapor,
 and methane are the main greenhouse gases that warm up the Earth. This is called a greenhouse effect.
-Due to the rise in temperature, this kind of effect will also make both polar bears' ice melt. As a
+Due to the rise in temperature, this kind of effect will also make both polars' ice melt. As a
 result, the melted water raises ocean water levels, causing coral bleaching since corals cannot live
 below thirty degrees Celsius. Next, the rise in the amount of carbon dioxide will pose the risk of
 ocean acidification because carbon dioxide will release positive hydrogen ions, which are acid ions,
