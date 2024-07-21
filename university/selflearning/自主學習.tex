@@ -6,68 +6,39 @@
 
 \begin{large}
 \begin{boxpar}{Dandelion}{說明}
-利用 Python 寫出像樣的遊戲
+透過 Python 的 pygame 函式庫寫出一款圖形化介面的遊戲。
 \end{boxpar}
 \begin{boxpar}{Dandelion}{動機}
-雖然我有在寫程式，但常常好奇在那個黑盒子外還可以用程式寫出其他很酷的應用，很經典的例子就是遊戲。一直以來，我更是好奇程式是如何處理視窗、按鈕、元件等等的圖形化介面的項目。來到師大附中博覽會，看到電算社能夠利用python
-的 pygame
-做成各式各樣好玩遊戲的樣子尤其感到羨慕。所以這次為了圓夢以及完成擔任電算社靜態展的義務，決定與組員以
-pygame 寫出像樣的遊戲，花點心思懷抱與追求自己的夢想。
+「除了在終端機上無聊的輸入輸出外，人們是怎麼樣利用程式語言寫出一款遊戲的呢？包括基本的視窗、按鈕、
+    元件等等的圖形化介面元件是如何以程式處理的？」這個問題雖然已經在我的腦內迴盪了無數次，仍舊因為
+    擔心自己實力不足而退卻不敢親身嘗試。直到後來來到了校內社團博覽會的電算社展區，看到他們是怎麼利用
+    我已經學會的程式語言 python 寫出一款有趣的遊戲。所幸入社後社內學長姊慧眼獨具，任命我擔任靜態展
+    學術長的要職。所以為了完成自己的職責以及解開一直以來對程式語言的疑惑，我選擇以 pygame 函式庫與
+    組員一起撰寫一款遊戲。
 \end{boxpar}
     \begin{boxpar}{Dandelion}{學習過程}
-        在學習 pygame 的剛開始，接觸到的最基本的 pygame 程式碼後驚訝的發現竟然有 while true:
-        的危險程式，但後來才知道只要讓程式碼有條件地退出就不會產生太多問題，所以在寫
-        pygame 程式時小心一點就不用擔心。
-        \begin{mintbox}{範例程式碼}{Dandelion}{python}
-# Example file showing a basic pygame "game loop"
-import pygame
-
-# pygame setup
-pygame.init()
-screen = pygame.display.set_mode((1280, 720))
-clock = pygame.time.Clock()
-running = True
-
-while running:
-    # poll for events
-    # pygame.QUIT event means the user clicked X to close your window
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-    # fill the screen with a color to wipe away anything from last frame
-    screen.fill("purple")
-
-    # RENDER YOUR GAME HERE
-
-    # flip() the display to put your work on screen
-    pygame.display.flip()
-
-    clock.tick(60)  # limits FPS to 60
-
-pygame.quit()
-        \end{mintbox}
+        在學習之前，找到對的方向是身為學習者最重要的步驟。一開始雖然已經選擇了 pygame 作為遊戲引擎，
+        不過我因為擔心難度太高而搖擺在眾多的遊戲引擎之間搖擺。不過後來經過學長的勸導，發現要成功應該要抓著機會不迷惘的往前衝。所以後來靜下心來認真學習
+        pygame 後發現沒有自己所想像中的難，讓自己重拾自己的信心完成這項重大的任務。
     \end{boxpar}
-
-    \newpage
-\begin{boxpar}{Dandelion}{遇到的問題：不清楚 pygame.display}
-一開始常常遇到的問題就是 pyagme.display 的管理。因為 GUI
-    遊戲需要處理圖形並顯示在畫面上，所以管理顯示器的 pygame.display
-    就相當重要。不過身為初學者常常因為不熟悉 pygame.display
-    的運作方式而常常導致圖形在顯示器上錯位。
+\begin{boxpar}{Dandelion}{遇到的問題：惱人的 pygame.display}
+一開始常常遇到的問題就是 pyagme.display 的管理。之所以 GUI
+    如此注重圖形處理，所以管理顯示器的 pygame.display
+    就在遊戲內扮演重大的角色。不過在最初因為對它的不熟悉常常在執行程式時發生圖形錯位，令我頭痛不已。
     \begin{boxpar}{Dandelion}{解決方式}
         查詢 Documentation 是最簡單的解決方式。身為未來想當程式設計師的我，必須要學習如何閱讀
-        Documentation。因為有時在問別人問題或放棄之前，其實已經有人在網路上早就解答過了。當時我有去
-        \href{https://www.pygame.org/docs/ref/display.html}{pygame 官網} 查詢，更是去
-        \href{https://www.youtube.com/watch?v=C8YtdC8mxTU}{YouTube 上}
-        查詢影片。在種種的查詢下，我也逐漸得知 framerate fps
-        或是其他視窗管理功能的對應 pygame
-        程式碼。完全熟悉他們後，我對我自己所下的功夫感到大有成就感。
+        Documentation。因為有時在問別人問題或放棄之前，其實可能有人在網路上早就解答過了。當時我有去
+        \href{https://www.pygame.org/docs/ref/display.html}{pygame 官網} 查詢，更是
+        \href{https://www.youtube.com/watch?v=C8YtdC8mxTU}{上 YouTube 取得幫助}。
+        最後發現自己能夠以 pygame 表示 GUI 基礎元件，並且了解其中的原理，算是解答了一開始問題的一半了。
     \end{boxpar}
 \end{boxpar}
 \begin{boxpar}{Dandelion}{遇到的問題：組員之間無法溝通}
-    身為一位電算社靜態展學術長，組員之間的溝通以及進度分配是十分重要的。一開始，因為溝通不足而導致自己誤會組員耍賴不做事。但經過一次次的線上討論與會議以及釐清每位組員的個別需求後發現其實組員是肯認真工作的。最後發現我與組員逐漸的打成一片，是一件極為幸福的事情。
+    作為一位領導者，團隊成員之間的溝通和任務分配至關重要。一開始由於溝通不足而誤解了團隊成員並認為
+    他們在逃避工作。然而我為了解決這個問題召開一次次的線上會議，並且嘗試釐清每位成員的個別需求。
+    這不但冰釋之前彼此之間的誤解，還讓我和團隊成員逐漸建立了良好的合作關係，融洽的一起完成手上的工作。
 \end{boxpar}
+\newpage
 \begin{boxpar}{Dandelion}{成品}
     我把原始碼\href{https://github.com/hsnucrc46/crcproject}{commit 到 GitHub
     上}並且以 GPLv3 的 copyleft 授權書授權。
