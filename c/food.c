@@ -18,5 +18,5 @@ int main(int argc, char *argv[]) {
 		printf("貢丸\n");
 		break;
 	}
-	return EXIT_SUCCESS;
+	return 0;
 }
