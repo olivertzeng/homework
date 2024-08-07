@@ -16,4 +16,4 @@ task being procrastinated.
 Lastly, the task-switcher, who loses focus over one task quickly. They are out of focus too easliy
 to begin any main task before they switch them, thus the procrastination.
 
-These are some ways we can classify different kinds of procrastinators from their own habis.
+These are some ways we can classify different kinds of procrastinators from their own habits.
