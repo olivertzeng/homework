@@ -19,9 +19,6 @@ int main(int argc, char *argv[]) {
 		for (int i = 1; i < 2 * n - 1; i += 2) {
 			pf(i, n);
 		}
-		for (int i = 2 * n - 5; i > 0; i -= 2) {
-			pf(i, n);
-		}
 		printf("\n");
 	}
 	return 0;
