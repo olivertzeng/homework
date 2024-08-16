@@ -4,7 +4,7 @@ Procrastinating to a difficult task is what people would but are advised not to 
 panic when there is less time. There are some ways to classify these procrastinators who
 procrastinate according to their habits and why they do so.
 
-First of is the avoider, which is the most obvious one on the board. These people are just too
+First off is the avoider, which is the most obvious one on the board. These people are just too
 afraid of the task itself or just underestimates themselves. This leads to anxiousness and
 uncomfortness to finish the job, thus the procrastination.
 
