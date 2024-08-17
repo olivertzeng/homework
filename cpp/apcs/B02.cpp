@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <functional>
 
 int main() {
 	int a, b, c;
