@@ -16,11 +16,8 @@ int main(int argc, char *argv[]) {
 		if (vt[num].empty()) {
 			std::cout << "\n";
 		} else {
-			for (auto it = vt[num].begin(); it != vt[num].end(); ++it) {
-				std::cout << *it;
-				if (it != vt[num].end() - 1) {
-					std::cout << " ";
-				}
+			for (auto &var : vt[num]) {
+				std::cout << var << " \n"[&var == &vt[num].back()];
 			}
 			std::cout << "\n";
 		}

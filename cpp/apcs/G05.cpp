@@ -7,6 +7,7 @@ long long person[1000];
 int main(int argc, char *argv[]) {
 	std::ios::sync_with_stdio(0), std::cout.tie(0), std::cin.tie(0);
 	long long n, m, a, t = 0;
+	std::queue<long long> team[1005], line;
 	while (std::cin >> n) {
 		memset(person, 0, sizeof(person));
 		std::cout << "Line #" << ++t << "\n";
@@ -17,7 +18,6 @@ int main(int argc, char *argv[]) {
 				person[a] = i;
 			}
 		}
-		std::queue<long long> team[1005], line;
 		std::pmr::string s;
 		while (std::cin >> s) {
 			if (s == "STOP") {
