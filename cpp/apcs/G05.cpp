@@ -3,7 +3,7 @@
 #include <queue>
 #include <string>
 
-long long person[1000];
+long long person[1000000];
 int main(int argc, char *argv[]) {
 	std::ios::sync_with_stdio(0), std::cout.tie(0), std::cin.tie(0);
 	long long n, m, a, t = 0;
@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 				person[a] = i;
 			}
 		}
-		std::pmr::string s;
+		std::string s;
 		while (std::cin >> s) {
 			if (s == "STOP") {
 				break;
