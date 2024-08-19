@@ -11,4 +11,4 @@ they partner with the platform and collect precious personal data. While this ma
 these data collection is not a good plan as it sacrifices privacy and also poses risk of making
 people suspicious of data selling.
 To conclude, the appearance of digital ads makes modern web worse because it not only block real data that the
-user might want to view, it also collects a huge amount of data from users.
+user might want to view, it also collects a huge amount of data from users that compromises privacy.
