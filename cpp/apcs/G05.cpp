@@ -41,6 +41,9 @@ int main(int argc, char *argv[]) {
 				std::cout << line.front() - 1300 << "\n";
 				line.pop();
 			}
+			while (!line.empty()) {
+				line.pop();
+			}
 		}
 	}
 

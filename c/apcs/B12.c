@@ -5,7 +5,7 @@
 int main(int argc, char *argv[]) {
 	double n;
 	scanf("%lf", &n);
-	if (!n || n != (long long)n) {
+	if (n != (long long)n) {
 		printf("X\n");
 	} else if ((long long)n % 2) {
 		printf("Odd\n");
