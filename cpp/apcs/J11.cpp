@@ -11,6 +11,6 @@ int main(int argc, char *argv[]) {
 		psum += b;
 		nmax = std::max(nmax, b);
 	}
-	std::cout << std::max(nmax * 2, psum)<< "\n";
+	std::cout << std::max(nmax * 2, psum) << "\n";
 	return 0;
 }
