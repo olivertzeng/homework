@@ -8,13 +8,15 @@ int main(int argc, char *argv[]) {
 	std::cin >> n;
 
 	for (int i = 0; i < n; i++) {
-		for (int i = 0; i < 2; i++) {
-			std::cin >> left >> right;
-			usr[left]++;
-			usr[right + 1]--;
-		}
+		std::cin >> left >> right;
+		usr[left]++;
+		usr[right + 1]--;
 	}
+
 	for (int i = 0; i < n; i++) {
+		if (usr[i]) {
+			std::cout << "yes\n";
+		}
 		if (usr[i] > 0) {
 			L = i;
 		} else if (usr[i] < 0) {
