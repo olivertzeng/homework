@@ -5,9 +5,9 @@ optimistic to AI's developement and usages, while others are afraid that AI is g
 their salary with nothing. The latter concerns fits much better to the reality.
 
 Artificial intellegence's invention should be a benifit. However, humanity has proven that they
-aren't. How? Firstly, some people would completely write esseys, complete homeworks, make art with
+aren't. How? Firstly, some people would write esseys, complete homeworks, make art with
 AI. While this sounds reasonible, it poses risks of human undevelopement. Because you let the AI do
-for you, you don't learn or improve your skills from them. Moreover, they also produce problems
+them for you, you don't learn or improve your skills from them. Moreover, they also produce problems
 associated with copyright. The data fed to the AI may contain copyrited content and may create new
 issues from them.
 

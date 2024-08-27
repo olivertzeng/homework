@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 #define MOD 998244353
