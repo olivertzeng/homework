@@ -1,10 +1,10 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-std::vector<std::pair<int, int>> a;
-std::vector<int> pre;
+std::vector<std::pair<long long, long long>> a, b;
+std::vector<long long> pre;
 
-int lucky(int l, int r) {
+long long lucky(long long l, long long r) {
 	if (l == r)
 		return l;
 	for (auto &[var, index] : a) {
@@ -28,21 +28,23 @@ int main() {
 	long long n;
 	std::cin >> n;
 	a.resize(n);
+	b.resize(n);
 	pre.resize(n);
 
-	for (int i = 0; i < n; i++) {
+	for (long long i = 0; i < n; i++) {
 		long long ai;
 		std::cin >> ai;
 		a[i] = {ai, i};
 		pre[i] = ai;
 	}
 
-	for (int i = 1; i < n; i++) {
+	for (long long i = 1; i < n; i++) {
 		pre[i] = pre[i - 1] + pre[i];
 	}
 
+	b = a;
 	std::sort(a.begin(), a.end());
-	int ans = lucky(0, n - 1);
-	std::cout << a[ans].first << "\n";
+	long long ans = lucky(0, n - 1);
+	std::cout << a[ans].first << " " << ans << "\n";
 	return 0;
 }
