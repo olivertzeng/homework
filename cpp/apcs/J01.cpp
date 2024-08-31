@@ -15,6 +15,6 @@ int main() {
 		}
 	}
 	max = std::max(max, cnt);
-	std::cout << max << std::endl;
+	std::cout << max << '\n';
 	return 0;
 }

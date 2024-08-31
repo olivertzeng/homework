@@ -21,7 +21,7 @@ int main() {
 		sum += coins[i];
 	}
 
-	std::cout << sum + 1 << std::endl;
+	std::cout << sum + 1 << '\n';
 
 	return 0;
 }

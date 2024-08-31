@@ -8,5 +8,5 @@ double BMI(double w, double h) {
 int main() {
 	double w, h;
 	std::cin >> w >> h;
-	std::cout << std::fixed << std::setprecision(3) << BMI(w, h) << endl;
+	std::cout << std::fixed << std::setprecision(3) << BMI(w, h) << '\n';
 }
