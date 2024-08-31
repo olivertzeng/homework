@@ -4,19 +4,20 @@
 #include <vector>
 
 int main() {
-	long long n;
+	std::ios::sync_with_stdio(0), std::cout.tie(0), std::cin.tie(0);
+	long n;
 	std::cin >> n;
 
-	std::vector<std::pair<long long, long long>> customers(n);
+	std::vector<std::pair<long, long>> customers(n);
 	for (auto &[a, b] : customers) {
 		std::cin >> a >> b;
 	}
-	sort(customers.begin(), customers.end());
-	std::vector<long long> rooms;
+	std::sort(customers.begin(), customers.end());
+	std::vector<long> rooms;
 	for (const auto &[a, b] : customers) {
 		bool assigned = false;
 		for (auto &room : rooms) {
-			if (a >= room) {
+			if (a > room) {
 				room = b;
 				assigned = true;
 				break;
@@ -27,11 +28,6 @@ int main() {
 		}
 	}
 
-	std::cout << rooms.size() << "\n";
-	for (int i = 0; i < customers.size(); ++i) {
-		std::cout << i + 1 << " ";
-	}
-	std::cout << "\n";
-
+	std::cout << rooms.size() << '\n';
 	return 0;
 }
