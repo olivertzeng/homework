@@ -1,20 +1,17 @@
-// Copyright (c) 2024 Oliver Tzeng. All Rights Reserved.
-
 #include <bits/stdc++.h>
-using namespace std;
 
 int main(int argc, char *argv[]) {
 	int n;
-	cout << "Please input the number of layers: ";
-	cin >> n;
+	std::cout << "Please input the number of layers: ";
+	std::cin >> n;
 	for (int i = n - 1; i >= 0; i--) {
 		for (int j = i; j > 0; j--) {
-			cout << " ";
+			std::cout << " ";
 		}
 		for (int j = 2 * (n - i) - 1; j > 0; j--) {
-			cout << "*";
+			std::cout << "*";
 		}
-		cout << "\n";
+		std::cout << "\n";
 	}
 	return 0;
 }

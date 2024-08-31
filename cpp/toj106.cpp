@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-using namespace std;
 
 int main(int argc, char *argv[]) {
 	int buf = 2;
@@ -8,9 +7,9 @@ int main(int argc, char *argv[]) {
 		buf++;
 	}
 	if (buf % 3) {
-		cout << "turn left\n";
+		std::cout << "turn left\n";
 	} else {
-		cout << "turn right\n";
+		std::cout << "turn right\n";
 	}
 	return 0;
 }

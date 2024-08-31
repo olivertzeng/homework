@@ -1,22 +1,18 @@
-
 #include <algorithm>
 #include <iostream>
+#include <utility>
 #include <vector>
-
-using namespace std;
 
 int main() {
 	long long n;
-	cin >> n;
+	std::cin >> n;
 
-	vector<pair<long long, long long>> customers(n);
+	std::vector<std::pair<long long, long long>> customers(n);
 	for (auto &[a, b] : customers) {
-		cin >> a >> b;
+		std::cin >> a >> b;
 	}
-
 	sort(customers.begin(), customers.end());
-
-	vector<long long> rooms;
+	std::vector<long long> rooms;
 	for (const auto &[a, b] : customers) {
 		bool assigned = false;
 		for (auto &room : rooms) {
@@ -31,11 +27,11 @@ int main() {
 		}
 	}
 
-	cout << rooms.size() << "\n";
+	std::cout << rooms.size() << "\n";
 	for (int i = 0; i < customers.size(); ++i) {
-		cout << i + 1 << " ";
+		std::cout << i + 1 << " ";
 	}
-	cout << "\n";
+	std::cout << "\n";
 
 	return 0;
 }

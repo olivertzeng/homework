@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
-using namespace std;
+#include <vector>
 
 int n, buf;
-vector<int> score;
+std::vector<int> score;
 int main(int argc, char *argv[]) {
-	cin >> n;
+	std::cin >> n;
 	while (n--) {
-		cin >> buf;
+		std::cin >> buf;
 		score.push_back(buf);
 	}
-	sort(score.begin(), score.end(), greater<int>());
-	cout << score[0] << "\n";
+	std::sort(score.begin(), score.end(), std::greater<int>());
+	std::cout << score[0] << "\n";
 	return 0;
 }

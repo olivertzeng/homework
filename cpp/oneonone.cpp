@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
-using namespace std;
+#include <string>
 
 int main(int argc, char *argv[]) {
-	string n;
-	cin >> n;
-	cout << n[n.size() - 2];
+	std::string n;
+	std::cin >> n;
+	std::cout << n[n.size() - 2];
 	return 0;
 }
