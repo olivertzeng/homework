@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <map>
 #include <vector>
 
 int main(int argc, char *argv[]) {
@@ -7,6 +8,7 @@ int main(int argc, char *argv[]) {
 	int n, record = 0, tmp = 0;
 	std::cin >> n;
 	std::vector<long> visited(n);
+	std::map<long, long> songs;
 	long k[n];
 	for (int i = 0; i < n; i++) {
 		std::cin >> k[i];
