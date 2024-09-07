@@ -15,3 +15,8 @@ the lost of focus to a certain task and such. He seems to be like a heavy social
 fell into the trap of addiction.
 
 To conclude, social media has negative impacts to teenagers and should be limited.
+
+Author's comments: TBH, I'm struggling to express a real-life example in a coherent
+manner and would like to improve my wording. Additionally, my unfamiliarity
+with this topic is negatively impacting the quality of this essay. Hope that you'll give me some
+SOPs on how I can have a much more proper procedure on dealing with this kind of topics.
