@@ -2,7 +2,7 @@
 
 Artificial intelligence has garnered significant attention among people. While many are optimistic
 about AI's development and usage, there are ethical issues associated with its development that
-cannot be ignored. Here are some of the questionable problems that AI produces
+cannot be ignored. Here are some of the questionable problems that AI produces.
 
 Recently, an AI art competition sparked controversy when some artists argued that generated artwork
 harmed copyright and shouldn't be promoted or rewarded. Furthermore, AIs are cold, emotionless
