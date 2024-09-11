@@ -2,7 +2,6 @@
 
 int main(int argc, char *argv[]) {
 	int n;
-	std::cout << "Please input the number of layers: ";
 	std::cin >> n;
 	for (int i = n - 1; i >= 0; i--) {
 		for (int j = i; j > 0; j--) {
