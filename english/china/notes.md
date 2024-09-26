@@ -10,6 +10,7 @@
 
 ## 2
 ```vega
+
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"description": "The change of social mobility over time.",
@@ -24,14 +25,24 @@
 		"type": "line"
 	},
 	"encoding": {
-		"x": { "field": "mobility", "type": "quantitative" },
+		"x": {
+			"field": "mobility",
+			"type": "quantitative",
+			"scale": { "domain": [0, 25] }
+		},
 		"y": {
 			"field": "time",
 			"type": "nominal",
 			"title": null,
-			"sort": ["Before 1990s", "1900s", "Lately"]
-		}
-	}
+			"sort": ["Before 1990s", "1900s", "2000s", "2010s", "2020s", "Lately"]
+		},
+		"tooltip": [
+			{ "field": "time", "type": "nominal" },
+			{ "field": "mobility", "type": "quantitative" }
+		]
+	},
+	"height": 400,
+	"width": 600
 }
 ```
 
