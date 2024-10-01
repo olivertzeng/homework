@@ -17,4 +17,5 @@ To truly solve this problem, as consumers we should properly check if there are 
 that can track the source about where the food came from. In that way, not only it informs if it's
 past the expiratory date or not, it also tells us if the food is from a trustworthy source.
 
-Lesson learned that maintaining food safety is really important in our day-to-day lives.
+Lesson learned that maintaining food safety is really important in our day-to-day lives. So we
+should always look for ourselves if the food we eat are safe or not.
