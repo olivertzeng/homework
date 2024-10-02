@@ -6,16 +6,19 @@ topic to be discussed. Not only it affects how our body will react to the food w
 affects financially since if people don't trust the food safety that the providers provide, sales
 would drop.
 
-I've actually encountered a shocking event associated with food safety once. When I was fourteen
-looking for food in the supermarket, I find myself in a variety of well-packaged vegetables. The one
-and only that caught my eye is the one which is significantly cheaper than the other ones. However
-after we unwrapped the leaf vegetables we bought, we were astonished to find out that a large portion
-of it were corrupted. Despite the package is fully transparent, the fraud can only be spotted after
-opening the package.
+I personally had encountered food safety problems when I was fourteen. Looking for food in the
+supermarket, I find myself in a variety of vegetables. Because of greediness, I bought the cheapest
+from all of the options availble. My greediness however, did not pan out after we found out that a
+large portion of it were corrupted after unwrapping. Despite that the plastic container is fully
+transparent, the fraud can only be spotted after opening the package. Since that event I was almost
+cautious about food safety all the time.
 
-To truly solve this problem, as consumers we should properly check if there are any sorts of trace
-that can track the source about where the food came from. In that way, not only it informs if it's
-past the expiratory date or not, it also tells us if the food is from a trustworthy source.
+The encounter of this tragic event led me to some solutions for the concern I had. Firstly, the
+lables on the package that indicates where it is from and when it expires is a key to pick out bad
+options. Next, always look for past scandles about the provider of the food on the internet to
+determine it's credibility. Last but not least, rather than constantly being prompted to buy the
+cheapest option out there, we should always remain our cautiousness to those lables.
 
-Lesson learned that maintaining food safety is really important in our day-to-day lives. So we
-should always look for ourselves if the food we eat are safe or not.
+To conclude, food safety after all is still ***a serious problem*** that people should be aware of.
+But with those tips in mind, you should be good to fight off food safety and retrieve back your
+healthy body!
