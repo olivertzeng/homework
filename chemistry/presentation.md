@@ -16,11 +16,12 @@
 ---
 
 ```vega
+
 {
 	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 	"title": {
 		"text": "平均 pH 值",
-		"fontSize": 75
+		"fontSize": 55
 	},
 	"data": {
 		"values": [
@@ -28,12 +29,11 @@
 			{ "組別": "對照組", "pH 值": 3.3 }
 		]
 	},
-	"mark": "bar",
+	"mark": { "type": "bar", "width": { "band": 0.4 }, "cornerRadiusEnd": 20 },
 	"encoding": {
 		"x": {
 			"field": "組別",
 			"type": "nominal",
-			"scale": { "type": "point", "padding": 1 },
 			"axis": { "labelAngle": 0, "labelFontSize": 20, "titleFontSize": 30 }
 		},
 		"y": {
