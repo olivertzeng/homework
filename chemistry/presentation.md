@@ -22,28 +22,30 @@ ph值會因為雙氧水的分解而下降
 ---
 
 ### 實驗流程圖
-
 ```mermaid
 flowchart LR
-    A{提出問題} -->|預測結果| B(提出假說)
-    B --> C{準備實驗}
-    C -->|雙氧水、酵素| D[裝入容器]
+    C{開始實驗} -->|雙氧水、酵素| D[裝入容器]
     C -->|雙氧水| F[對照組]
     D -->|實驗| H[製備實驗組]
     H & F -->|測量 pH 值| E[比較 pH 值]
     E --> G(歸納結論)
 ```
-> [!WARNING]
-> 結論發現實驗設計失敗
 
 ---
 
 ### 實驗組員照片
-![image](https://i.imgur.com/y1q9zJ3.jpeg)
-![image](https://i.imgur.com/X1cNfPu.jpeg)
-![image](https://i.imgur.com/moR8A6W.jpeg)
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <img src="https://i.imgur.com/axvfsCT.png" style="max-width: 30%; height: auto; margin: 10px;" />
+    <img src="https://i.imgur.com/Nq8OVAX.png" style="max-width: 30%; height: auto; margin: 10px;" />
+</div>
+    <img src="https://i.imgur.com/y1q9zJ3.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
+    <img src="https://i.imgur.com/X1cNfPu.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
+    <img src="https://i.imgur.com/moR8A6W.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
+
 
 ---
+
+
 
 ## 結果數據表格
 
