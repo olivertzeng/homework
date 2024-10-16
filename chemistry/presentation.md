@@ -21,7 +21,20 @@ ph值會因為雙氧水的分解而下降
 
 ---
 
-### 實驗驗流程圖
+### 實驗流程圖
+mermaid
+graph TD;
+準備器材、材料-->製備對照組;
+製備對照組-->開始實驗以準備實驗組;
+開始實驗以準備實驗組-->比較實驗組以及對照組;
+比較實驗組以及對照組-->驗證假說做出結論;
+
+---
+
+### 實驗組員照片
+![image](https://i.imgur.com/y1q9zJ3.jpeg)
+![image](https://i.imgur.com/X1cNfPu.jpeg)
+![image](https://i.imgur.com/moR8A6W.jpeg)
 
 ---
 
