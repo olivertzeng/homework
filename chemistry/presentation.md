@@ -35,29 +35,23 @@ flowchart LR
 
 ### 實驗組員照片
 <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-        <img src="https://i.imgur.com/axvfsCT.png" style="max-width: 30%; height: auto; margin: 10px;" />
+    <img src="https://i.imgur.com/axvfsCT.png" style="max-width: 30%; height: auto; margin: 10px;" />
     <img src="https://i.imgur.com/Nq8OVAX.png" style="max-width: 30%; height: auto; margin: 10px;" />
-</div>
     <img src="https://i.imgur.com/y1q9zJ3.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
-    <img src="https://i.imgur.com/X1cNfPu.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
-    <img src="https://i.imgur.com/moR8A6W.jpeg" style="max-width: 30%; height: auto; margin: 10px;" />
-
 
 ---
 
-
-
 ## 結果數據表格
 
-| 實驗次數  | 實驗組             | 對照組  |
-|----------|-------------------|--------|
-| 1        | 6.3               | 3.3    |
-| 2        | 6.3               | 3.3    |
-| 3        | 6.4               | 3.3    |
-| 4        | 6.4               | 3.3    |
-| 5        | 6.9               | 3.3    |
-| 平均      | 6.46              | 3.3    |
-| SD       | 0.25              | 0      |
+| 實驗次數  | 實驗組 (pH 值) | 對照組 (pH 值) |
+|----------|----------------|----------------|
+| 1        | 6.3            | 3.3            |
+| 2        | 6.3            | 3.3            |
+| 3        | 6.4            | 3.3            |
+| 4        | 6.4            | 3.3            |
+| 5        | 6.9            | 3.3            |
+| **平均**  | **6.46**       | **3.3**        |
+| **標準差 (SD)** | **0.25**   | **0**          |
 
 ---
 
