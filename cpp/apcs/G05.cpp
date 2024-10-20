@@ -4,7 +4,7 @@
 #include <string>
 
 long long person[1000000];
-int main() {
+int main(int argc, char *argv[]) {
 	std::ios::sync_with_stdio(0), std::cout.tie(0), std::cin.tie(0);
 	long long n, m, a, t = 0;
 	std::string s;
@@ -24,13 +24,13 @@ int main() {
 				break;
 			if (s == "ENQUEUE") {
 				std::cin >> a;
-				if (person[a] == 0) {
-					line.push(a + 1300);
-				} else {
-					if (team[person[a]].size() == 0) {
+				if (person[a]) {
+					if (!team[person[a]].size()) {
 						line.push(person[a]);
 					}
 					team[person[a]].push(a);
+				} else {
+					line.push(a + 1300);
 				}
 			} else {
 				if (line.front() <= 1000) {
