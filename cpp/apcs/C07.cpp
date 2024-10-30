@@ -7,12 +7,10 @@ int main(int argc, char *argv[]) {
 	std::string usr;
 	std::cin >> usr;
 	for (int i = 0; i < usr.size(); i++) {
-		char c;
-		std::cin >> c;
-		int temp = static_cast<int>(c) - 97;
-		votes[c]++;
+		int temp = static_cast<int>(usr[i]) - 97;
+		votes[temp]++;
 	}
-	for (int i = 0; i < usr.size(); i++) {
+	for (int i = 0; i < 26; i++) {
 		std::cout << static_cast<char>(i + 97) << ": " << votes[i] << '\n';
 	}
 

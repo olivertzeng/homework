@@ -1,17 +1,24 @@
 #include <iostream>
 
-double calc(double N, double M, double x, double D) { return (D - N * x) / M; }
-
 int main() {
-	double n, m, d;
+	int n, m, d;
+	bool ans = false;
 	std::cin >> n >> m >> d;
-	std::string ans = "NO";
-	for (double i = 1; i <= 205; i++) {
-		int y = calc(n, m, i, d);
-		if (y % 2 == 0 && y) {
-			ans = "YES";
-			break;
+	if (!(d % n || d % m)) {
+		ans = true;
+	} else if (d > n && d > m) {
+		int nmax = d / n;
+		int mmax = d / m;
+		for (int i = 1; i <= nmax; i++) {
+			for (int j = mmax; j >= 1; j--) {
+				if (n * i + m * j == d) {
+					ans = true;
+					break;
+				}
+			}
+			if (ans)
+				break;
 		}
 	}
-	std::cout << ans << "\n";
+	std::cout << (ans ? "YES\n" : "NO\n");
 }
