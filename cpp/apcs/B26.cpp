@@ -7,12 +7,10 @@ int main(int argc, char *argv[]) {
 	while (n != -1) {
 		std::cin >> cap;
 		int d = 0, t = n * cap;
-		while (n > 1 && t > 0) {
+		for (int t = n * cap; n > 0 && t; d++) {
 			t -= n;
 			n = t / cap + 1;
-			d += 1;
 		}
-		d += t;
 		std::cout << d << '\n';
 		std::cin >> n;
 	}
