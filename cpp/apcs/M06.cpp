@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 
 #define MOD 998244353
 #define MAX_N 20000000
@@ -15,12 +15,13 @@ long long chung(int n) {
 }
 
 int main(int argc, char *argv[]) {
+	std::ios::sync_with_stdio(0), std::cout.tie(0), std::cin.tie(0);
 	long long n, k;
-	scanf("%lld %lld", &n, &k);
+	std::cin >> n >> k;
 	for (int i = 0; i < k; i++) {
 		long long usr;
-		scanf("%lld", &usr);
-		printf("%lld\n", chung(usr));
+		std::cin >> usr;
+		std::cout << chung(usr) << '\n';
 	}
 	return 0;
 }

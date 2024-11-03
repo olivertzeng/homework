@@ -7,9 +7,9 @@ int main(int argc, char *argv[]) {
 	while (n != -1) {
 		std::cin >> cap;
 		int d = 0, t = n * cap;
-		for (int t = n * cap; n > 0 && t; d++) {
+		for (int t = n * cap; n > 0 && t > 0; d++) {
 			t -= n;
-			n = t / cap + 1;
+			n = t / cap + (t % cap ? 1 : 0);
 		}
 		std::cout << d << '\n';
 		std::cin >> n;
