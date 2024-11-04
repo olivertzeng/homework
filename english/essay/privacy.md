@@ -41,3 +41,13 @@ profiles.
 In conclusion, privacy is a huge topic and maintaining it is hard since that there are a lot of
 hunters out there who is staring on you like a thief. So just always keep in mind to keep your
 data safe and using these methods I mentioned your data should be safe in no time!
+
+## Main Ideas
+* Use Open Source Alternatives
+* Install Content Blockers
+* Read Through Every Agreement
+* A Breif Story Of My Own Experience
+
+### P.S.
+* Sometimes I have trouble on shortening the essay without changing the main ideas, especially for
+  topics that I have great passion in. How do I keep my essay shorter like extracting an extract?
