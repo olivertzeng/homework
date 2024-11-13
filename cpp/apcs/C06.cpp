@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 		temp = i;
 		for (int j = 0; j < q; j++) {
 			temp = op[j][temp] - 1;
-			ans[j][i] = s[temp];
+			ans[j][temp] = s[i];
 		}
 	}
 
