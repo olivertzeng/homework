@@ -64,6 +64,29 @@ int g(int n) {
 \end{minted}
 
 \end{sblock}
+\begin{sblock}{SkyBlue}
+
+32. 右側 Mystery()函式 else 部分運算式應為何，才能使得 Mystery(9) 的回傳值為 34。\\
+
+\begin{enumerate}[(A)]
+	\item x + Mystery(x - 1)
+	\item x * Mystery(x - 1)
+	\item Mystery(x - 2) + Mystery(x + 2)
+	\item Mystery(x - 2) + Mystery(x - 1)
+\end{enumerate}
+
+\tcblower
+\begin{minted}[fontsize=\small]{c}
+int Mystery(int x) {
+	if (x <= 1) {
+		return x;
+	} else {
+		return ____________;
+	}
+}
+\end{minted}
+\end{sblock}
+
 來源:
 \href{https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2022/10/%E8%A7%80%E5%BF%B5%E9%A1%8C_%E9%A1%8C%E5%9E%8B%E7%AF%84%E4%BE%8B.pdf}{原始題目連結}
 \end{document}
