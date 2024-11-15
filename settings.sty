@@ -19,11 +19,10 @@
 \usetikzlibrary{shapes.geometric}
 \usemintedstyle{gruvbox-light}
 \setminted{
-  fontsize=\regular,
-  breaklines,
   autogobble,
-  linenos,
-  numbersep=3mm
+  fontsize=\regular,
+  numbersep=1mm,
+  tabsize=4
 }
 % \setCJKmainfont{FakePearl}
 \setmonofont{JetBrainsMonoNerdFont-Regular.ttf}
@@ -37,44 +36,37 @@
 %%%%%%%%%%%%%%%%%%%% Background %%%%%%%%%%%%%%%%%%%%%%%%
 \fill[#4] (current page.south west) rectangle (current page.north east);
 
-\foreach \i in {2.5,...,22}
-{
+\foreach \i in {2.5,...,22}{
     \node[rounded corners,#4!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.west)+(2.5,-5)$) {} ;
 }
 
 %%%%%%%%%%%%%%%%%%%% Background Polygon %%%%%%%%%%%%%%%%%%%%
-\foreach \i in {0.5,...,22}
-{
+\foreach \i in {0.5,...,22} {
 \node[rounded corners,#4!60,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north west)+(2.5,0)$) {} ;
 }
 
-\foreach \i in {0.5,...,22}
-{
+\foreach \i in {0.5,...,22} {
 \node[rounded corners,#4!90,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.north east)+(0,-9.5)$) {} ;
 }
 
 
-\foreach \i in {21,...,6}
-{
+\foreach \i in {21,...,6} {
 \node[#4!85,rounded corners,draw,regular polygon,regular polygon sides=6, minimum size=\i cm,ultra thick] at ($(current page.south east)+(-0.2,-0.45)$) {} ;
 }
 
 
 %%%%%%%%%%%%%%%%%%%% Title of the Report %%%%%%%%%%%%%%%%%%%%
-\node[left,#4!5,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] at ($(current page.north east)+(0,-9.5)$)
-{
+\node[left,#4!5,minimum width=0.625*\paperwidth,minimum height=3cm, rounded corners] at ($(current page.north east)+(0,-9.5)$) {
 {\fontsize{25}{30} \selectfont \bfseries #1}
 };
 
 %%%%%%%%%%%%%%%%%%%% Subtitle %%%%%%%%%%%%%%%%%%%%
-\node[left,#4!10,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-11)$)
-{
+\node[left,#4!10,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-11)$) {
 {\huge \textit{#2}}
 };
 
 %%%%%%%%%%%%%%%%%%%% Author Name %%%%%%%%%%%%%%%%%%%%
-\node[left,#4!5,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-13)$)
-{
+\node[left,#4!5,minimum width=0.625*\paperwidth,minimum height=2cm, rounded corners] at ($(current page.north east)+(0,-13)$) {
 {\Large \textsc{#3}}
 };
 
@@ -135,4 +127,14 @@ boxed title style={empty,size=minimal,toprule=2pt,top=4pt,
   title=#2,
   fonttitle=\bfseries,
   sharp corners
+}
+
+\newtcolorbox[auto outer boxes=sblock]{sblock}[2]{%
+    title=,
+    colback=white,
+    colframe=#1!75!black,
+    sidebyside,
+    boxrule=0pt,
+    toprule=1pt,
+    bottomrule=1pt,
 }

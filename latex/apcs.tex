@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{../settings}
+
+\begin{document}
+\renewcommand{\baselinestretch}{1.5}
+\hexcover{APCS 題本}{範例觀念題}{作者：廖家緯、曾嘉禾、APCS 出題}{SkyBlue}{電算社 2024}
+
+
+\begin{sblock}{SkyBlue}
+
+2. 給定右側函式f()，當執行f(10)時，最終回傳結果為何？\\
+
+\begin{enumerate}[(A)]
+    \item 1
+    \item 3840
+    \item -3840
+    \item 執行時導致無限迴圈，不會停止執行
+\end{enumerate}
+
+\tcblower
+\begin{minted}[fontsize=\small]{c}
+int f(int i) {
+	if (i > 0)
+		if ((i / 2) % 2 == 0)
+			return f(i - 2) * i;
+		else
+			return f(i - 2) * (-i);
+	else
+		return 1;
+}
+\end{minted}
+\end{sblock}
+
+\begin{sblock}{SkyBlue}
+
+31. 右側 g(4)函式呼叫執行後，回傳值為何？\\
+
+\begin{enumerate}[(A)]
+    \item 6
+    \item 11
+    \item 13
+    \item 14
+\end{enumerate}
+
+\tcblower
+
+\begin{minted}[fontsize=\small]{c}
+int f(int n) {
+	if (n > 3) {
+		return 1;
+	} else if (n == 2) {
+		return (3 + f(n + 1));
+	} else {
+		return (1 + f(n + 1));
+	}
+}
+int g(int n) {
+	int j = 0;
+	for (int i = 1; i <= n - 1; i = i + 1) {
+		j = j + f(i);
+	}
+	return j;
+}
+\end{minted}
+
+\end{sblock}
+來源:
+\href{https://apcs.csie.ntnu.edu.tw/wp-content/uploads/2022/10/%E8%A7%80%E5%BF%B5%E9%A1%8C_%E9%A1%8C%E5%9E%8B%E7%AF%84%E4%BE%8B.pdf}{原始題目連結}
+\end{document}
