@@ -5,7 +5,7 @@ int main(int argc, char *argv[]) {
 	int n, c = 0;
 	std::cin >> n;
 	int fr[n];
-	bool searched[n];
+	bool searched[50000] = {false};
 	for (auto &person : fr)
 		std::cin >> person;
 
