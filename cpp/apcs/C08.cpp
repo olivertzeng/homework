@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 		usr.push(u);
 	}
 	while (!usr.empty()) {
-		if (buf > usr.top())
+		if (buf >= usr.top())
 			buf++;
 		else
 			buf = usr.top();
