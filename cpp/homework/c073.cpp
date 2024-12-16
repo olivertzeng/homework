@@ -14,21 +14,20 @@ int prev[(int)1e5], next[(int)1e5], ad[(int)1e5], first[(int)1e5],
 
 void reset(int x) {
 	// reset(x): reset ad[x] pile until meeting x
-	// FIX: This is currently not functional
 	int buf = prev[x], temp;
 	while (buf != -1) {
 		if (last[ad[buf]] == buf)
 			last[ad[buf]] = prev[buf];
+		else
+			prev[next[buf]] = prev[buf];
 		if (first[ad[buf]] == buf)
 			first[ad[buf]] = next[buf];
-		if (next[buf] != -1)
-			prev[next[buf]] = prev[buf];
-		if (prev[buf] != -1)
+		else
 			next[prev[buf]] = next[buf];
 		next[buf] = first[buf];
 		prev[first[buf]] = buf;
 		temp = prev[buf];
-		ad[buf] = first[buf] = buf;
+		ad[buf] = first[buf] = last[buf] = buf;
 		prev[buf] = -1;
 		buf = temp;
 	}
