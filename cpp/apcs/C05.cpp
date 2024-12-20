@@ -12,23 +12,17 @@ int main(int argc, char *argv[]) {
 		for (auto &mines : sub)
 			std::cin >> mines;
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
-			for (int k = 0; k < n; k++) {
-				for (int l = 0; l < m; l++) {
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+			for (int k = 0; k < n; k++)
+				for (int l = 0; l < m; l++)
 					if (abs(i - k) <= 1 && abs(j - l) <= 1 &&
 						(i != k || j != l))
 						sminefield[i][j] += minefield[k][l];
-				}
-			}
-		}
-	}
 
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
 			std::cout << sminefield[i][j] << (j + 1 == m ? "\n" : " ");
-		}
-	}
 
 	return 0;
 }
