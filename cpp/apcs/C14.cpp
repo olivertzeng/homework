@@ -11,8 +11,8 @@ int main(int argc, char *argv[]) {
 	int r, c, m, opt, fc = 0, sc = 0;
 	std::cin >> r >> c >> m;
 	bool f = false;
-	std::vector<std::vector<int>> usr(r, std::vector<int>(c));
-	std::vector<std::vector<int>> fusr(c, std::vector<int>(r));
+	std::vector<std::vector<long long>> usr(r, std::vector<long long>(c));
+	std::vector<std::vector<long long>> fusr(c, std::vector<long long>(r));
 	for (auto &sub : usr)
 		for (auto &num : sub)
 			std::cin >> num;
