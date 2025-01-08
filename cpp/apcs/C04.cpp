@@ -9,18 +9,15 @@ int main(int argc, char *argv[]) {
 	for (int i = 0; i < n; i++) {
 		int r, c, t, x;
 		std::cin >> r >> c >> t >> x;
-		for (int j = 0; j < h; j++) {
-			for (int k = 0; k < w; k++) {
+		for (int j = 0; j < h; j++)
+			for (int k = 0; k < w; k++)
 				if (abs(r - j) + abs(c - k) <= t)
 					m[j][k] += x;
-			}
-		}
 	}
 
-	for (int i = 0; i < h; i++) {
+	for (int i = 0; i < h; i++)
 		for (int j = 0; j < w; j++)
 			std::cout << m[i][j] << (j + 1 == w ? "\n" : " ");
-	}
 
 	return 0;
 }

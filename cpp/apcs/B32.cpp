@@ -6,9 +6,8 @@ int main(int argc, char *argv[]) {
 	int n, l = 0, r = 0;
 	std::cin >> n;
 	std::pair<int, int> usr[n];
-	for (auto &bruh : usr) {
+	for (auto &bruh : usr)
 		std::cin >> bruh.second >> bruh.first;
-	}
 	std::sort(usr, usr + n, std::less<>());
 	for (const auto &p : usr) {
 		if (p.first == -1) {
