@@ -9,7 +9,6 @@ int main(int argc, char *argv[]) {
 	std::string usr;
 	std::stack<char> ref;
 	std::cin >> usr;
-
 	for (int i = 0, n = usr.size(); i < n; i++) {
 		if (i < n / 2)
 			ref.push(usr[i]);
@@ -28,8 +27,6 @@ int main(int argc, char *argv[]) {
 		} else
 			ref.pop();
 	}
-
 	std::cout << usr << '\n';
-
 	return 0;
 }
