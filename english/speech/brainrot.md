@@ -7,8 +7,7 @@
 # 113 學年度英文演講比賽講稿
 
 * Sometimes work sofa
-* as a person who was born with the Internet, i can tell you that there are no particular meaning of
-  this word
+* as a person who was born with the Internet, i can tell you that there are no particular meaning of this word
 As you scrolled through various Reddit feeds, your eyes suddenly caught the peculiar word "skibidi" and wondered to yourself: "What could it mean?"
 
 * in fact tons of words like these viral
