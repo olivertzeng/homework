@@ -1,6 +1,6 @@
 import re
 
-blocklist = ["a", "an", "at", "for", "in", "of", "on", "the", "to"]
+blocklist = ["a", "an", "at", "be", "for", "in", "of", "on", "the", "to"]
 
 with open("phrases.csv", "r") as file:
     lines = file.readlines()
