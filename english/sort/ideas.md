@@ -7,6 +7,12 @@
 > Ignore the first line of the file for all the steps below, so that the second line of the file is
 > the first line and so on
 
+> [!NOTE]
+> Here is the `blocklist = ["a", "an", "at", "be", "for", "in", "of", "on", "the", "to"]`
+> And also `re.match(r"\(\w+\)", line)`
+> The block tag should be 峀
+> The newline tag should be 甭
+
 # Algorithm Sorting Steps
 0. Cleaning
 	* Remove extra whitespaces
