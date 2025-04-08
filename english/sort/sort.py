@@ -1,4 +1,5 @@
 import csv
+import pathlib
 import re
 
 # Define constants
@@ -76,7 +77,7 @@ def block_lines(lines):
             if not (words[n] in BLOCKED_WORDS or re.search(r"\([^)]*\)", words[n])):
                 lines[i] = BLOCK_LABEL + " " + line
         n += 1
-    print(n)
+    print("iterated " + str(n) + " times")
     return n, lines
 
 
@@ -89,9 +90,10 @@ def restore_lines(lines):
     """Remove labels"""
     result = []
     for line in lines:
-        line = line.replace(BLOCK_LABEL, "")
+        line = line.replace(BLOCK_LABEL + " ", "")
         line = line.replace(PARENTHESIS_LABEL, " ")
         line = line.replace(NEWLINE_LABEL, "\n")
+        result.append(line)
     return result
 
 
@@ -108,31 +110,32 @@ def process_file(input_file, output_file):
     with open(input_file, "r") as f_in:
         reader = csv.reader(f_in)
         next(reader)  # Skip the first line
+        pathlib.Path("debug").mkdir(exist_ok=True)
         print("now cleaning")
         lines = [[cell.strip() for cell in row] for row in reader]
         lines = [",".join(row) for row in lines]
         print("cleaning complete")
-        write_to_file("cleaned.csv", lines)
+        write_to_file("debug/cleaned.csv", lines)
 
         print("now grouping")
         lines = group_lines(lines)
         print("grouping complete")
-        write_to_file("grouped.csv", lines)
+        write_to_file("debug/grouped.csv", lines)
 
         print("now blocking")
         n, lines = block_lines(lines)
         print("blocking complete")
-        write_to_file("blocked.csv", lines)
+        write_to_file("debug/blocked.csv", lines)
 
         print("now sorting")
         lines = sorted(lines, key=lambda x: x.split()[n])
         print("sorting complete")
-        write_to_file("sorted.csv", lines)
+        write_to_file("debug/sorted.csv", lines)
 
         print("now labeling")
         lines = label_lines(lines)
         print("labeling complete")
-        write_to_file("labeled.csv", lines)
+        write_to_file("debug/labeled.csv", lines)
 
         print("now restoring")
         lines = restore_lines(lines)
