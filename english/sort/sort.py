@@ -1,47 +1,12 @@
+# set(b).issubset(set(a)) b in a
 import csv
 import pathlib
 import re
 
-# Define constants
-BLOCKED = [
-    "N",
-    "Ving",
-    "a",
-    "about",
-    "an",
-    "and",
-    "at",
-    "be",
-    "by",
-    "for",
-    "in",
-    "it",
-    "itself",
-    "of",
-    "on",
-    "one",
-    "one's",
-    "oneself",
-    "out",
-    "sb",
-    "sth",
-    "the",
-    "to",
-    "up",
-    "with",
-]
-UNBLOCKED = [
-    "by oneself",
-    "in itself",
-    "one another",
-    "one by one",
-    "one on one",
-    "up to N",
-    "up to",
-]
-BLOCK_LABEL = "峀"
-NEWLINE_LABEL = "甭"
-PARENTHESIS_LABEL = "刂"
+
+def load_list(filename):
+    with open(filename, "r") as f:
+        return [line.strip() for line in f.readlines()]
 
 
 def isMain(l):
@@ -52,6 +17,14 @@ def isMain(l):
 def blocked(l, n):
     noUnblock = l.split()[n] in BLOCKED or re.search(r"\([^)]*\)", l.split()[n])
     return not (l[: l.index(",")] in UNBLOCKED) and noUnblock
+
+
+# Define constants
+BLOCKED = set(load_list("blocked.txt"))
+UNBLOCKED = set(load_list("unblocked.txt"))
+BLOCK_LABEL = "峀"
+NEWLINE_LABEL = "甭"
+PARENTHESIS_LABEL = "刂"
 
 
 def group(lines):
