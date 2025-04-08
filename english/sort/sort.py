@@ -1,5 +1,5 @@
-# set(b).issubset(set(a)) b in a
 import csv
+import os
 import pathlib
 import re
 
@@ -20,11 +20,38 @@ def blocked(l, n):
 
 
 # Define constants
-BLOCKED = set(load_list("blocked.txt"))
-UNBLOCKED = set(load_list("unblocked.txt"))
+BLOCKED = set(load_list("blocked.txt") or [])
+UNBLOCKED = set(load_list("unblocked.txt") or [])
 BLOCK_LABEL = "峀"
 NEWLINE_LABEL = "甭"
 PARENTHESIS_LABEL = "刂"
+
+
+def check(lines):
+    for l in lines:
+        if (
+            set(re.sub(r"\([^)]*\)", "", l).replace(",", "").split()) <= set(BLOCKED)
+            and not l in UNBLOCKED
+        ):
+            if os.path.exists("unblock.txt"):
+                response = input(
+                    "You currently have a conflicting phrase"
+                    + l
+                    + ", append it to unblock.txt? [Y/n]: "
+                )
+            else:
+                response = input(
+                    "You currently have a conflicting phrase"
+                    + l
+                    + ", create unblock.txt and append it? [Y/n]: "
+                )
+            if response.lower() == "n":
+                print("Phrase not appended, aborting.")
+                quit()
+            else:
+                with open("unblock.txt", "a") as f:
+                    f.write(l + "\n")
+                print("Phrase appended to unblock.txt")
 
 
 def group(lines):
@@ -118,6 +145,8 @@ def process_file(input_file, output_file):
         print("grouping complete")
         write_to_file("debug/grouped.csv", lines)
 
+        print("now checking for illegal phrases")
+        check(lines)
         print("now blocking")
         n, lines = block(lines)
         print("blocking complete")
