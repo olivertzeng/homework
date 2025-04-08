@@ -14,11 +14,7 @@
 **/*_minted*
 **/*cache*
 **/.venv*
-**/blocked.csv
-**/cleaned.csv
-**/grouped.csv
-**/labeled.csv
+**/debug
 **/output.csv
 **/phrases.csv
-**/sorted.csv
 Pipfile*
