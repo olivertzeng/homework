@@ -54,7 +54,7 @@ def check(lines):
         phrase = l.split(",")[0].replace(PARENTHESIS_LABEL, " ")
         if (
             set(re.sub(r"\([^)]*\)", "", phrase).split()) <= set(BLOCKED)
-            and not l in UNBLOCKED
+            and not phrase in UNBLOCKED
         ):
             if UNBLOCK_FILE is None:
                 console.print(
