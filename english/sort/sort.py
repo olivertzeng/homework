@@ -2,6 +2,7 @@ import os
 import re
 
 from rich.console import Console
+from rich.panel import Panel
 
 console = Console()
 
@@ -11,7 +12,7 @@ def initFile(filename, type):
         try:
             open(filename, "r").close()
         except FileNotFoundError:
-            print(f"CRITICAL ERROR: {filename} not found. Aborting")
+            console.print(f"CRITICAL ERROR: {filename} not found. Aborting")
             quit()
         return filename
 
@@ -20,7 +21,7 @@ def initFile(filename, type):
             try:
                 return set([line.strip() for line in f.readlines()])
             except FileNotFoundError:
-                print(f"Error: {filename} not found.")
+                console.print(f"Error: {filename} not found.")
                 return set()
 
 
@@ -44,6 +45,7 @@ UNBLOCKED = set(initFile(UNBLOCK_FILE, "txt") or [])
 BLOCK_LABEL = "峀"
 NEWLINE_LABEL = "甭"
 PARENTHESIS_LABEL = "刂"
+DEBUG = True
 x = 1
 
 
@@ -54,15 +56,16 @@ def check(lines):
             set(re.sub(r"\([^)]*\)", "", phrase).split()) <= set(BLOCKED)
             and not l in UNBLOCKED
         ):
-            try:
-                if UNBLOCK_FILE is None:
-                    raise ValueError(
-                        "UNBLOCK_FILE is not set and has conflicting phrase!"
+            if UNBLOCK_FILE is None:
+                console.print(
+                    Panel(
+                        "UNBLOCK_FILE is not set and has conflicting phrase!",
+                        title="ERROR",
                     )
-            except ValueError as e:
-                print(f"Error: {e}")
+                )
+                quit()
             console.print(
-                f"You currently have a conflicting phrase [bold red]{phrase}[/bold red] on line [bold red]{i+1}[/bold red], append it to [bold red]{UNBLOCK_FILE}[/bold red]?"
+                f"You currently have a conflicting phrase [bold red]{phrase}[/bold red] on line [bold red]{i+1}[/bold red], append it to [bold red]{UNBLOCK_FILE}"
             )
             promptInProccess = True
             while promptInProccess:
@@ -74,7 +77,7 @@ def check(lines):
                     console.print(
                         f"[bold green]==> [Y]Touch [bold red]{UNBLOCK_FILE}[/bold red] and Append to list[/bold green] [N]Abort [S]Show the culprit line"
                     )
-                response = console.input("[bold green]==> [/bold green]")
+                response = console.input("[bold green]==> ")
                 if response.lower() == "n":
                     console.print("Phrase not appended, aborting.")
                     quit()
@@ -83,9 +86,7 @@ def check(lines):
                 else:
                     with open(UNBLOCK_FILE, "a") as f:
                         f.write(phrase + "\n")
-                    console.print(
-                        "Phrase appended to [bold red]{UNBLOCK_FILE}[/bold red]"
-                    )
+                    console.print(f"Phrase appended to [bold red]{UNBLOCK_FILE}")
                     promptInProccess = False
 
 
@@ -156,12 +157,15 @@ def restore(lines, buf):
     return result
 
 
-def write_to_file(filename, lines):
+def write_to_file(filename, lines, debug=True):
     """Write the given lines to a new csv file."""
     with open(filename, "w", newline="") as f_out:
         for l in lines:
             f_out.write(l + "\n")
-    console.print(f"Lines written to {filename}")
+    if debug:
+        console.log(f"[bold yellow]DEBUG: [/bold yellow]Lines written to {filename}")
+    else:
+        console.log(f"Lines written to {filename}")
 
 
 def process_file(input_file, output_file):
@@ -170,38 +174,37 @@ def process_file(input_file, output_file):
         buf = []
         lines = f_in.readlines()
         buf = lines[:x]
-        console.print("now cleaning")
         lines = [line.strip() for line in lines[x:]]
 
-        console.print("cleaning complete")
-        write_to_file("debug/cleaned.csv", lines)
+        console.log("cleaning complete")
+        if DEBUG:
+            write_to_file("debug/cleaned.csv", lines)
 
-        console.print("now grouping")
         lines = group(lines)
-        console.print("grouping complete")
-        write_to_file("debug/grouped.csv", lines)
+        console.log("grouping complete")
+        if DEBUG:
+            write_to_file("debug/grouped.csv", lines)
 
-        console.print("now checking for illegal phrases")
         check(lines)
-        console.print("now blocking")
         n, lines = block(lines)
-        console.print("blocking complete")
-        write_to_file("debug/blocked.csv", lines)
+        console.log("blocking complete")
+        if DEBUG:
+            write_to_file("debug/blocked.csv", lines)
 
-        console.print("now sorting")
         lines = sorted(lines, key=lambda x: x.split()[n])
-        console.print("sorting complete")
-        write_to_file("debug/sorted.csv", lines)
+        console.log("sorting complete")
+        if DEBUG:
+            write_to_file("debug/sorted.csv", lines)
 
-        console.print("now labeling")
         lines = label(lines)
-        console.print("labeling complete")
-        write_to_file("debug/labeled.csv", lines)
+        console.log("labeling complete")
+        if DEBUG:
+            write_to_file("debug/labeled.csv", lines)
 
-        console.print("now restoring")
         lines = restore(lines, buf)
-        console.print("restoring complete")
-        write_to_file(output_file, lines)
+        console.log("restoring complete")
+        write_to_file(output_file, lines, False)
+        console.log("task complete")
 
 
 process_file(initFile(INPUT_FILE, "csv"), OUTPUT_FILE)
