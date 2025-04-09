@@ -4,3 +4,6 @@
 [submodule "sort"]
 	path = english/sort
 	url = git@github.com:olivertzeng/sort.git
+[submodule "english/sort"]
+	path = english/sort
+	url = git@github.com:olivertzeng/sort.git
