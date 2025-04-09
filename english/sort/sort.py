@@ -1,12 +1,27 @@
-import csv
 import os
-import pathlib
 import re
 
+from rich.console import Console
 
-def load_list(filename):
-    with open(filename, "r") as f:
-        return [line.strip() for line in f.readlines()]
+console = Console()
+
+
+def initFile(filename, type):
+    if type == "csv":
+        try:
+            open(filename, "r").close()
+        except FileNotFoundError:
+            print(f"CRITICAL ERROR: {filename} not found. Aborting")
+            quit()
+        return filename
+
+    elif type == "txt":
+        with open(filename, "r") as f:
+            try:
+                return set([line.strip() for line in f.readlines()])
+            except FileNotFoundError:
+                print(f"Error: {filename} not found.")
+                return set()
 
 
 def isMain(l):
@@ -20,38 +35,58 @@ def blocked(l, n):
 
 
 # Define constants
-BLOCKED = set(load_list("blocked.txt") or [])
-UNBLOCKED = set(load_list("unblocked.txt") or [])
+INPUT_FILE = "phrases.csv"
+OUTPUT_FILE = "output.csv"
+BLOCK_FILE = "blocked.txt"
+UNBLOCK_FILE = "unblocked.txt"
+BLOCKED = set(initFile(BLOCK_FILE, "txt") or [])
+UNBLOCKED = set(initFile(UNBLOCK_FILE, "txt") or [])
 BLOCK_LABEL = "峀"
 NEWLINE_LABEL = "甭"
 PARENTHESIS_LABEL = "刂"
+x = 1
 
 
 def check(lines):
-    for l in lines:
+    for i, l in enumerate(lines):
+        phrase = l.split(",")[0].replace(PARENTHESIS_LABEL, " ")
         if (
-            set(re.sub(r"\([^)]*\)", "", l).replace(",", "").split()) <= set(BLOCKED)
+            set(re.sub(r"\([^)]*\)", "", phrase).split()) <= set(BLOCKED)
             and not l in UNBLOCKED
         ):
-            if os.path.exists("unblock.txt"):
-                response = input(
-                    "You currently have a conflicting phrase"
-                    + l
-                    + ", append it to unblock.txt? [Y/n]: "
-                )
-            else:
-                response = input(
-                    "You currently have a conflicting phrase"
-                    + l
-                    + ", create unblock.txt and append it? [Y/n]: "
-                )
-            if response.lower() == "n":
-                print("Phrase not appended, aborting.")
-                quit()
-            else:
-                with open("unblock.txt", "a") as f:
-                    f.write(l + "\n")
-                print("Phrase appended to unblock.txt")
+            try:
+                if UNBLOCK_FILE is None:
+                    raise ValueError(
+                        "UNBLOCK_FILE is not set and has conflicting phrase!"
+                    )
+            except ValueError as e:
+                print(f"Error: {e}")
+            console.print(
+                f"You currently have a conflicting phrase [bold red]{phrase}[/bold red] on line [bold red]{i+1}[/bold red], append it to [bold red]{UNBLOCK_FILE}[/bold red]?"
+            )
+            promptInProccess = True
+            while promptInProccess:
+                if os.path.exists(UNBLOCK_FILE):
+                    console.print(
+                        f"[bold green]==> [Y]Append to list[/bold green] [N]Abort [S]Show the culprit line"
+                    )
+                else:
+                    console.print(
+                        f"[bold green]==> [Y]Touch [bold red]{UNBLOCK_FILE}[/bold red] and Append to list[/bold green] [N]Abort [S]Show the culprit line"
+                    )
+                response = console.input("[bold green]==> [/bold green]")
+                if response.lower() == "n":
+                    console.print("Phrase not appended, aborting.")
+                    quit()
+                elif response.lower() == "s":
+                    console.print(l)
+                else:
+                    with open(UNBLOCK_FILE, "a") as f:
+                        f.write(phrase + "\n")
+                    console.print(
+                        "Phrase appended to [bold red]{UNBLOCK_FILE}[/bold red]"
+                    )
+                    promptInProccess = False
 
 
 def group(lines):
@@ -100,7 +135,7 @@ def block(lines):
             if not blocked(l, n):
                 lines[i] = BLOCK_LABEL + " " + l
         n += 1
-    print("iterated " + str(n) + " times")
+    console.print("iterated " + str(n) + " times")
     return n, lines
 
 
@@ -109,7 +144,7 @@ def label(lines):
     return [f"{i+1},{l}" for i, l in enumerate(lines)]
 
 
-def restore(lines):
+def restore(lines, buf):
     """Remove labels"""
     result = []
     for l in lines:
@@ -117,6 +152,7 @@ def restore(lines):
         l = l.replace(PARENTHESIS_LABEL, " ")
         l = l.replace(NEWLINE_LABEL, "\n")
         result.append(l)
+    result = buf + result
     return result
 
 
@@ -125,47 +161,47 @@ def write_to_file(filename, lines):
     with open(filename, "w", newline="") as f_out:
         for l in lines:
             f_out.write(l + "\n")
-    print(f"Lines written to {filename}")
+    console.print(f"Lines written to {filename}")
 
 
 def process_file(input_file, output_file):
     """Process the input file and write to the output file."""
     with open(input_file, "r") as f_in:
-        reader = csv.reader(f_in)
-        next(reader)  # Skip the first line
-        pathlib.Path("debug").mkdir(exist_ok=True)
-        print("now cleaning")
-        lines = [[cell.strip() for cell in row] for row in reader]
-        lines = [",".join(row) for row in lines]
-        print("cleaning complete")
+        buf = []
+        lines = f_in.readlines()
+        buf = lines[:x]
+        console.print("now cleaning")
+        lines = [line.strip() for line in lines[x:]]
+
+        console.print("cleaning complete")
         write_to_file("debug/cleaned.csv", lines)
 
-        print("now grouping")
+        console.print("now grouping")
         lines = group(lines)
-        print("grouping complete")
+        console.print("grouping complete")
         write_to_file("debug/grouped.csv", lines)
 
-        print("now checking for illegal phrases")
+        console.print("now checking for illegal phrases")
         check(lines)
-        print("now blocking")
+        console.print("now blocking")
         n, lines = block(lines)
-        print("blocking complete")
+        console.print("blocking complete")
         write_to_file("debug/blocked.csv", lines)
 
-        print("now sorting")
+        console.print("now sorting")
         lines = sorted(lines, key=lambda x: x.split()[n])
-        print("sorting complete")
+        console.print("sorting complete")
         write_to_file("debug/sorted.csv", lines)
 
-        print("now labeling")
+        console.print("now labeling")
         lines = label(lines)
-        print("labeling complete")
+        console.print("labeling complete")
         write_to_file("debug/labeled.csv", lines)
 
-        print("now restoring")
-        lines = restore(lines)
-        print("restoring complete")
+        console.print("now restoring")
+        lines = restore(lines, buf)
+        console.print("restoring complete")
         write_to_file(output_file, lines)
 
 
-process_file("phrases.csv", "output.csv")
+process_file(initFile(INPUT_FILE, "csv"), OUTPUT_FILE)

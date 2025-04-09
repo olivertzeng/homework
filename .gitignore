@@ -15,6 +15,7 @@
 **/*cache*
 **/.venv*
 **/debug
+**/docx
 **/output.csv
 **/phrases.csv
 Pipfile*
