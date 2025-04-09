@@ -1,3 +1,6 @@
 [submodule "crcproject"]
 	path = crcproject
 	url = git@github.com:hsnucrc46/crcproject.git
+[submodule "sort"]
+	path = english/sort
+	url = git@github.com:olivertzeng/sort.git
