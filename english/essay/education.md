@@ -1,22 +1,19 @@
 "I'll be an astronaut in the future!" This might be common to hear when you ask a child what they
-would want to do in the future, but if you were to ask a teenager what to do, most of them would
-rather not bother thinking or saying things that what people think might be "the best for them" like
-doctors. Especially in Taiwan, students in middle school or high school tend to believe that tests
-results are all that matters. Their spark of passion has been ceased by the stress that has been put
-by the tests.
+would want to do in the future, but this dream and hope would be shattered by the reality of tests
+lying in front of them. Especially in Taiwan, students in middle school and high school tend to believe
+that tests results are the only thing deciding their future lives. These believes are caused by the
+use of test-based education instead of interest-based education. This indicates that schools teaches
+them what they want instead of what each of the student want to learn.
 
-People would think: "Why not change the way of learning? Instead of learning the current textbooks,
-why not learn whatever they like?" This has a downside compared to the current method however, that
-the learning cannot be standarlized or tested whether if a person is qualified or not, since every
-person has their own set of materials they learn with. So the best way to learn is to follow the
-current "test-based" learning with the school while learning what your interest points to in your
-own free time.
+Although I am one of the tops in class, I still have a strong passtion towards programming.
+Even if a test is just around the corner, I still strive to take some of my time savoring the sweet
+taste of putting my logical thoughts into programming languages.
 
-I'm one of the top in my class, but being a bookworm does not mean I do not have an interest. I love
-programming, and I spend an enourmous amount of time practicing my skills. Such as algorithms,
-syntaxs, or even version management. I had an exam called the CAP that would determine the final
-school you would go to according to your test result. Thus, I had to choose between studying tests
-and going foward with my interest. But I refused to choose between them and did both. Not only did I
-get a great result from the exam, I also gained a lot of knowledge just from committing code onto
-GitHub and interacting with other developers. I'm glad that I can keep my passion while maintaining
-my own test score.
+I once had an important exam that would determine the school you would go to according to the test
+result when I was in middle school. Because of my strong interest towards programming, I strugged
+deciding between studying for my test or going foward with my interest. But for the sake of my own
+future I decided to do them both. Because of my dedication, not only did I accomplish my greatest
+feats on developing my own new algorithm, I also made new friends along the way. Although I tried
+my best, my exam score was just only satisfactory. However, in this test-based education
+environment, it is still worth sacrificing some test score for my own interest and passion on
+something I like the most.
