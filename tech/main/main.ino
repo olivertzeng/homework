@@ -21,19 +21,19 @@
 
 #include "DFMobile.h"
 #include "HUSKYLENS.h"
-#include "NewPing.h"
+// #include "NewPing.h"
 #include "PIDLoop.h"
-#include "Servo.h"
+// #include "Servo.h"
 #include "SoftwareSerial.h"
 
 #define ZUMO_FAST 255 // speed
-int trigPin = 13;	  // TRIG pin
-int echoPin = 12;	  // ECHO pin
-float duration_us, distance_cm;
+// int trigPin = 13;	  // TRIG pin
+// int echoPin = 12;	  // ECHO pin
+// float duration_us, distance_cm;
 DFMobile Robot(6, 7, 4, 5); // initiate the Motor pin
 PIDLoop headingLoop(2000, 0, 0, false);
 // NewPing sonar(512, 13); // sonar pin
-Servo seperator;
+// Servo seperator;
 HUSKYLENS huskylens;
 // HUSKYLENS green line >> SDA; blue line >> SCL
 int ID1 = 1;
@@ -43,11 +43,11 @@ void setup() {
 	Serial.begin(115200);
 	Robot.Direction(LOW, HIGH); // initiate the positive direction
 								// configure the trigger pin to output mode
-	pinMode(trigPin, OUTPUT);
-	// configure the echo pin to input mode
-	pinMode(echoPin, INPUT);
-	seperator.attach(9); // Servo pin
-	seperator.write(0);
+	// pinMode(trigPin, OUTPUT);
+	// // configure the echo pin to input mode
+	// pinMode(echoPin, INPUT);
+	// seperator.attach(9); // Servo pin
+	// seperator.write(0);
 	Wire.begin();
 	while (!huskylens.begin(Wire)) {
 		Serial.println(F("Begin failed!"));
@@ -95,17 +95,17 @@ void loop() {
 		right += ZUMO_FAST;
 	}
 	// generate 10-microsecond pulse to TRIG pin
-	digitalWrite(trigPin, HIGH);
-	delayMicroseconds(10);
-	digitalWrite(trigPin, LOW);
+	// digitalWrite(trigPin, HIGH);
+	// delayMicroseconds(10);
+	// digitalWrite(trigPin, LOW);
 	// calculate the distance
-	distance_cm = 0.017 * pulseIn(echoPin, HIGH);
-	if (distance_cm < long(2)) {
-		Serial.println("Sonar Detected");
-		seperator.write(90);
-		delay(1000);
-		seperator.write(0);
-	}
+	// distance_cm = 0.017 * pulseIn(echoPin, HIGH);
+	// if (distance_cm < long(2)) {
+	// 	Serial.println("Sonar Detected");
+	// 	seperator.write(90);
+	// 	delay(1000);
+	// 	seperator.write(0);
+	// }
 	Serial.println(String() + left + "," + right);
 	Robot.Speed(left, right);
 }
