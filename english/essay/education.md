@@ -1,19 +1,12 @@
-"I'll be an astronaut in the future!" This might be common to hear when you ask a child what they
-would want to do in the future, but this dream and hope would be shattered by the reality of tests
-lying in front of them. Especially in Taiwan, students in middle school and high school tend to believe
-that tests results are the only thing deciding their future lives. These believes are caused by the
-use of test-based education instead of interest-based education. This indicates that schools teaches
-them what they want instead of what each of the student want to learn.
+Astronauts, musicians, pilots, these are the common list of jobs kids dream to be. However
+these dreams are often shattered by the reality of tests lying ahead of them in the future.
+Especially in Taiwan, students tend to believe that tests results are the only thing deciding their
+fates. These believes are caused by the overuse of test-based education, ignoring personal interests
+and what students want to be in the future.
 
-Although I am one of the tops in class, I still have a strong passtion towards programming.
-Even if a test is just around the corner, I still strive to take some of my time savoring the sweet
-taste of putting my logical thoughts into programming languages.
-
-I once had an important exam that would determine the school you would go to according to the test
-result when I was in middle school. Because of my strong interest towards programming, I strugged
-deciding between studying for my test or going foward with my interest. But for the sake of my own
-future I decided to do them both. Because of my dedication, not only did I accomplish my greatest
-feats on developing my own new algorithm, I also made new friends along the way. Although I tried
-my best, my exam score was just only satisfactory. However, in this test-based education
-environment, it is still worth sacrificing some test score for my own interest and passion on
-something I like the most.
+Despite the pressure test papers causes, it still would not throw out the fire of passion in my heart
+towards programming. I was once presented with a difficult choice between giving up my success to
+high school or giving up my passion towards programming during middle school. It was a hard decision
+but at last I followed my instinct and chose both. By planning a schedule of when to program and
+when to study, I effectively did both before the exam, which finally grants me a decent high school
+to go to.
