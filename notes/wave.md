@@ -1,5 +1,5 @@
 # 2-1 波動性質與週期波
-* v = \sqrt{\frac{F}{\mu}}
+* v = $\sqrt{\frac{F}{\mu}}$
 
 # 2-2 [波的反射與折射](https://haha90.phy.ntnu.edu.tw/content/TeachAnime/allTeachinfAnimation/wave2DBasic/wave2DBasic.html)
 
@@ -13,7 +13,7 @@
 | 輕繩 -> 重繩 |     相似變短     | 變小 | 變慢 | 不變 |
 | 重繩 -> 輕繩 |     相似變長     | 變大 | 變快 | 不變 |
 
-* 能量守恆：E_入射波 = E_反射波 + E_透射波
+* 能量守恆：$E_{入射波}$ = $E_{反射波}$ + $E_{透射波}$
 
 # 2-4 [駐波](https://haha90.phy.ntnu.edu.tw/content/TeachAnime/allTeachinfAnimation/wave2DStandingWave/wave2DStandingWave.html)
 * 音樂老師（基音）：幾個「連接點」
@@ -23,20 +23,20 @@
 
 ## 兩端固定
 
-| f_1 | 基音 | 第一諧音 |
+| $f_1$ | 基音 | 第一諧音 |
 | --- | -------- | -------- |
-| f_2 | 第一泛音 | 第二諧音 |
-| f_3 | 第二泛音 | 第三諧音 |
-| f_4 | 第三泛音 | 第四諧音 |
+| $f_2$ | 第一泛音 | 第二諧音 |
+| $f_3$ | 第二泛音 | 第三諧音 |
+| $f_4$ | 第三泛音 | 第四諧音 |
 
 
 ## 一端固定
 
-| f_1 | 基音 | 第一諧音 |
+| $f_1$ | 基音 | 第一諧音 |
 | --- | -------- | -------- |
-| f_2 | 第一泛音 | 第三諧音 |
-| f_3 | 第二泛音 | 第五諧音 |
-| f_4 | 第三泛音 | 第七諧音 |
+| $f_2$ | 第一泛音 | 第三諧音 |
+| $f_3$ | 第二泛音 | 第五諧音 |
+| $f_4$ | 第三泛音 | 第七諧音 |
 
 # 2-5 [惠更斯原理](https://haha90.phy.ntnu.edu.tw/content/TeachAnime/allTeachinfAnimation/interferenceTwoSource2023/interferenceTwoSource2023.html)
 - 新波前 == 包絡線
