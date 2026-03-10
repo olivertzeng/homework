@@ -1,5 +1,8 @@
 # 志願選填
 
+## 順位
+成大資工>清大應用數學>清大藝術>國立中山大學電機工程學系>國立中正大學資訊工程學系>科大資通
+
 ## 無測驗
 * [國立中正大學資訊工程學系](https://www.cac.edu.tw/apply115/system/ColQry_115xappLyfOrStu_Azd5gP29/html/115_041152.htm) 1
 * [國立中山大學電機工程學系英語組](https://www.cac.edu.tw/apply115/system/ColQry_115xappLyfOrStu_Azd5gP29/html/115_027132.htm) 0

@@ -1,0 +1,36 @@
+# 個人簡歷
+
+## 基本資料
+曾嘉禾 / 師大附中 / 18 歲
+
+## 技術背景
+- 國二開始自學 iOS 越獄、Linux 系統管理
+- 透過 Arch Wiki 獨立安裝並維護 Arch Linux
+- 主要使用 C++、Python、Shell、Lua、LaTeX
+- 自架 Navidrome、Immich、AdGuard 等十餘項 Docker 服務
+
+## 開源貢獻
+- 開發 replace.sh（1800 行 Bash 工具），
+  串接 OpenCC 與自訂 sed 詞典，將簡體中文自動轉換為
+  自然的臺灣正體用語，支援檔名與 PNG metadata 轉換
+- 開發 yt.py（多執行緒 YouTube 播放清單下載器），
+  處理音樂標籤、封面嵌入與 SponsorBlock 片段追蹤
+- 累計 145 個 Pull Request 合併至 topgrade-rs、yay、
+  BleachBit 等開源專案
+
+## 檢定與成績
+- TOEIC 960（2026/02/08，首次應試）
+- APCS 程式識讀 4 級 / 程式實作 3 級
+- 學測英文 15 級分、數A 12 級分
+- 奧福音樂檢定 8 級 / 史坦巴哈鋼琴檢定 9 級
+
+## 其他經歷
+- 師大附中電算社社員、班級資訊股長
+- 國小學習摺紙，四年級習得 Jeff Beynon 的 Spring into
+  Action，國中以全開紙自行放大製作並設計木製 LED 展示架
+- 受父親（WiFi 驅動程式設計工程師）啟發接觸 git 與 vim，
+  後續獨立探索至今
+
+## 我的理念
+軟體工程不只是寫程式——是為自己和使用者打造讓生活更方便的工具。
+開源是我實踐這個理念的方式。
