@@ -24,15 +24,6 @@ int main(int argc, char *argv[]) {
 			std::cin >> longQ1;
 			std::cin >> people[longQ1].first;
 			break;
-		case 3:
-			std::cin >> longQ1 >> longQ2;
-			for(auto &subset : friends) {
-				for(auto &element : subset) {
-					if (element == longQ1) {
-
-					}
-				}
-			}
 		case 4:
 			std::cin >> stringQ1 >> stringQ2;
 			break;
