@@ -7,3 +7,12 @@
 [submodule "english/sort"]
 	path = english/sort
 	url = git@github.com:olivertzeng/sort.git
+[submodule "antiSlopFestival/kimiMoonslop"]
+	path = antiSlopFestival/kimiMoonslop
+	url = ssh://git@ssh.github.com:443/olivertzeng/kimiMoonslop.git
+[submodule "antiSlopFestival/antiSlopFestival/kimiMoonslop"]
+	path = antiSlopFestival/antiSlopFestival/kimiMoonslop
+	url = ssh://git@ssh.github.com:443/olivertzeng/kimiMoonslop.git
+[submodule "antiSlopFestival/kimiMoonSlop"]
+	path = antiSlopFestival/kimiMoonSlop
+	url = ssh://git@ssh.github.com:443/olivertzeng/kimiMoonslop.git

@@ -1,0 +1,17 @@
+body {
+    background-color: #1e1e2e;
+    color: cadetblue;
+    text-align: center;
+    margin-top: 100pk;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#resetBtn {
+    background-color: red;
+    color: white;
+}
