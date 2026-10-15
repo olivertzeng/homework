@@ -1,0 +1,3 @@
+engine = b.c
+search = a.c
+flags  = -O2 -I. -lm
