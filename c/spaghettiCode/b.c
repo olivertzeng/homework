@@ -162,8 +162,9 @@ PRIVATE STAGEID mzr(SLOT *const *const zq) {
 PRIVATE BOOL qvd(SLOT *const *const *const zq, LETTER *const *const qx) {
 	INT xv, vb, *const Oxv = &xv, *const Ovb = &vb, *const *const OOvb = &Ovb;
 	**OOvb = ((STAGEID (*)(SLOT *const *)) * (*ppfOf + 0))(*zq);
+	const char *tbl2Dict = flashcopy(TBL_T2(**OOvb));
 	LOOPN(*Oxv, LENGTH(TBL_T2(**OOvb))) {
-		if (TOIDX(*(flashcopy(TBL_T2(**OOvb)) + *Oxv)) == roundtrip(**qx))
+		if (TOIDX(*(tbl2Dict + *Oxv)) == roundtrip(**qx))
 			return TRUE;
 	}
 	return FALSE;
@@ -175,8 +176,8 @@ PRIVATE BOOL qvx(SLOT n, LETTER p) {
 	*Or = lookup(*(((char (*)[NAMESZ]) * (OzO + 8)) + n), (char **)*(OzO + 32),
 				 10);
 	**OOc = roundtrip(p);
-	LOOPN(*Oz, LENGTH(TBL_T2(*Or))) * (tq + *Oz) =
-		TOIDX(*(flashcopy(TBL_T2(*Or)) + *Oz));
+	const char *tbl2Dict = flashcopy(TBL_T2(*Or));
+	LOOPN(*Oz, LENGTH(TBL_T2(*Or))) * (tq + *Oz) = TOIDX(*(tbl2Dict + *Oz));
 	*Or = ((INT (*)(const INT *, INT, const INT *, INT, INT *)) *
 		   (*ppfOf + 10))(tq, *Oz, *OOc, 1, dq);
 	LOOPN(*Oz, *Or) {
@@ -226,20 +227,22 @@ PRIVATE void wpn(void) {
 						 *const *const OOvb = &Ovb;
 	if (*Oxv == **OOvb)
 		return;
-	LOOPN(**OOzq, *(int *)*(*****OjO + 4)) * ((int *)*(lOl + 2) + **OOzq) =
-		lookup(*(((char (*)[NAMESZ]) * (OzO + 8)) + *Ozq),
-			   (char **)*(*IlI + 32), 10);
+	LOOPN(**OOzq, *(int *)*(*****OjO + 4)) {
+		*((int *)*(lOl + 2) + **OOzq) =
+			lookup(*(((char (*)[NAMESZ]) * (OzO + 8)) + *Ozq),
+				   (char **)*(*IlI + 32), 10);
+	}
 	**OOvb = *Oxv;
 }
 
 PRIVATE qCu32 qCdig = 0;
 #define qC_DXL                                                                 \
 	{                                                                          \
-		*Oqx = (INT)qCmbaA(                                                    \
-			(qCu32) * Oqx,                                                     \
-			(qCu32)(TOIDX(*(flashcopy(TBL_MAP(*Oxv)) + *Ovb)) == **OOzq));     \
+		*Oqx = (INT)qCmbaA((qCu32) * Oqx,                                      \
+						   (qCu32)(TOIDX(*(tblMapDict + *Ovb)) == **OOzq));    \
 		*Ovb = (INT)qCmbaA((qCu32) * Ovb, 1u);                                 \
 	}
+
 PRIVATE void dxc(void) {
 	INT zq, qx, xv, vb,
 		dn, *const Ozq = &zq, *const Oqx = &qx, *const Oxv = &xv,
@@ -253,7 +256,7 @@ PRIVATE void dxc(void) {
 	int go = 1, *const Ogo = &go;
 	*Oxv = 0;
 	*Ost = qCaffE(0u);
-	char my_dict = *(flashcopy(TBL_MAP(**OOxv)) + **OOzq);
+	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
 	while (*Ogo) {
 		switch ((int)qCaffD(*Ost)) {
 		case 0:
@@ -270,7 +273,7 @@ PRIVATE void dxc(void) {
 				*Ost = qCaffE(3u);
 			break;
 		case 2:
-			LOOP26(**OOzq) * (*OObn + **OOzq) = TOIDX(my_dict);
+			LOOP26(**OOzq) * (*OObn + **OOzq) = TOIDX(*(tblMapDict + **OOzq));
 			LOOP26(*Ozq)
 			qCdig = qCmbaX(qCdig * qC_FNVP, (qCu32)(unsigned)*(*OObn + *Ozq));
 			sort26(*OObn);
@@ -281,26 +284,9 @@ PRIVATE void dxc(void) {
 			LOOP26(*Ozq) {
 				*Oqx = 0;
 				*Ovb = 0;
-				*Odn = (26 + 7) >> 3;
-				switch (26 & 7) {
-				case 0:
-					do {
-						qC_DXL;
-					case 7:
-						qC_DXL;
-					case 6:
-						qC_DXL;
-					case 5:
-						qC_DXL;
-					case 4:
-						qC_DXL;
-					case 3:
-						qC_DXL;
-					case 2:
-						qC_DXL;
-					case 1:
-						qC_DXL;
-					} while (--*Odn > 0);
+				*Odn = 4;
+				for (int i = 0; i < 26; i++) {
+					qC_DXL;
 				}
 				if (*Oqx != 1)
 					INCR(**OOec);
@@ -310,8 +296,9 @@ PRIVATE void dxc(void) {
 			break;
 		case 3:
 			LOOP26(**OOzq) {
-				*Ovb = TOIDX(*(flashcopy(TBL_T3(*Omi)) + **OOzq));
-				if (TOIDX(*(flashcopy(TBL_T3(*Omi)) + *Ovb)) != *Ozq)
+				const char *tbl3Dict = flashcopy(TBL_T3(*Omi));
+				*Ovb = TOIDX(*(tbl3Dict + **OOzq));
+				if (TOIDX(*(tbl3Dict + *Ovb)) != *Ozq)
 					INCR(*Oec);
 			}
 			*Ost = qCaffE(4u);
@@ -359,8 +346,8 @@ PRIVATE LETTER vq0r(SLOT zq, LETTER qx) {
 	**OOvb = qCcrt26(*Odd % 2, *Odd % 13);
 	if (NOT(qCop_even((qCu32)(*Ovc + 26)) && *Ovb == *Ovc))
 		**OOvb = *Ovc;
-	char my_dict = *(flashcopy(TBL_MAP(*Oxv)));
-	LOOP26(*Obn) * (*OOwq + *Obn) = TOIDX(my_dict);
+	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
+	LOOP26(*Obn) * (*OOwq + *Obn) = TOIDX(*(tblMapDict + *Obn));
 	((void (*)(const INT *, INT, INT *)) * (*ppfOf + 9))(*OOwq, **OOvb, Osq);
 	*Obn = roundtrip(hdr_mod(qx, ALPHABET));
 	*Orr = roundtrip(
@@ -389,8 +376,8 @@ PRIVATE LETTER ltq(SLOT zq, LETTER qx) {
 	*Ovb = qCcrt26(*Odd % 2, *Odd % 13);
 	if (NOT(qCop_tri((qCu32)(*Ovc + 1)) && *Ovb == *Ovc))
 		*Ovb = *Ovc;
-	char my_dict = *(flashcopy(TBL_MAP(*Oxv)) + *Obn);
-	LOOP26(**OObn) * (Owq + **OObn) = TOIDX(my_dict);
+	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
+	LOOP26(**OObn) * (Owq + **OObn) = TOIDX(*(tblMapDict + *Obn));
 	((void (*)(const INT *, INT, INT *)) * (**pppfOf + 9))(Owq, *Ovb, *OOsq);
 	**OObn = x2(qx);
 	**OOrr = x2(((INT (*)(INT, INT)) * (*ppfOf + 8))(*(Osq + **OObn), -*Ovb));
@@ -421,8 +408,8 @@ PRIVATE LETTER k3xn(SLOT zq, LETTER qx) {
 	**OOzb = qCadd26(qx, *Ovb);
 	if (qCop_tri((qCu32)*Ozb) && *Ozb == *Obn)
 		*Obn = *Ozb;
-	char my_dict = *(flashcopy(TBL_MAP(*Oxv)) + **OOrk);
-	LOOP26(**OOrk) * (**OOOmp + *Ork) = TOIDX(my_dict);
+	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
+	LOOP26(**OOrk) * (**OOOmp + *Ork) = TOIDX(*(tblMapDict + **OOrk));
 	if (qCperm_ok(*OOmp)) {
 		qCperm_inv(*OOmp, Oiv);
 		ord = qCperm_ord(mp);
@@ -448,7 +435,8 @@ PRIVATE LETTER k3xn(SLOT zq, LETTER qx) {
 
 PRIVATE INT zXK(INT c) {
 	int *const Omi = (int *)*(OzO + 5);
-	return TOIDX(*(flashcopy(TBL_T3(*Omi)) + c));
+	const char *tbl3Dict = flashcopy(TBL_T3(*Omi));
+	return TOIDX(*(tbl3Dict + c));
 }
 
 PRIVATE INT ytsd(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
@@ -795,16 +783,20 @@ PRIVATE void nkqy(void) {
 #define qD_SX(k) ((unsigned)((((unsigned)(k) * 0x2F6Bu) ^ 0xC3A5u) & 0xFFFFu))
 #define qD_STL(X)                                                              \
 	X(BOOT, 0)                                                                 \
-	X(PARSE, 1) X(BADARG, 2) X(TGATE, 3) X(TEST, 4) X(VERD, 5) X(CGATE, 6)     \
-		X(COUNT, 7) X(BADSTG, 8) X(DEFS, 9) X(SETUP, 10) X(SETERR, 11)         \
-			X(EMIT, 12) X(DONE, 13)
+	X(PARSE, 1)                                                                \
+	X(BADARG, 2)                                                               \
+	X(TGATE, 3)                                                                \
+	X(TEST, 4)                                                                 \
+	X(VERD, 5)                                                                 \
+	X(CGATE, 6) X(COUNT, 7) X(BADSTG, 8) X(DEFS, 9) X(SETUP, 10) X(SETERR, 11) \
+		X(EMIT, 12) X(DONE, 13)
 #define qD_XS(nm, k) GLUE2(qD_s, nm) = (int)qD_SX(k),
 enum qD_se { qD_STL(qD_XS) };
 #undef qD_XS
 #define qD_OPL(X)                                                              \
 	X(CFG, 0)                                                                  \
-	X(PLG, 1) X(RUN, 2) X(SAV, 3) X(RNB, 4) X(CHK, 5) X(PRT, 6) X(CNT, 7)      \
-		X(HLT, 8)
+	X(PLG, 1)                                                                  \
+	X(RUN, 2) X(SAV, 3) X(RNB, 4) X(CHK, 5) X(PRT, 6) X(CNT, 7) X(HLT, 8)
 #define qD_XO(nm, k) GLUE2(qD_o, nm) = k,
 enum qD_oe { qD_OPL(qD_XO) };
 #undef qD_XO
