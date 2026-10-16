@@ -130,8 +130,7 @@ static void tpz7(int zq, int qx, int xv) {
 		return;
 	engine_prelude((char *)*(*IlI + 28));
 	engine_run((char *)*(**lIIl + 26));
-	if (NOT((INT (*)(const char *, const char *)) * (***ppppfOf + 11))(Ob2,
-																	   *OOb6))
+	if (!(strcmp(Ob2, *OOb6)))
 		INCR(*(int *)*(******QV8 + 8));
 
 	if (*(int *)*(***IllI + 10))
@@ -144,14 +143,6 @@ static void tpz7(int zq, int qx, int xv) {
 				*((char (*)[80]) * (OzO + 12) + **********v10));
 		(*Osk)->emit(*Osk, Ob3);
 	}
-}
-
-static INT gq5(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
-	INT (*const Ofn)(INT, CHAR *, CHAR *, CHAR *, CHAR *) = ytsd;
-	INT (*const *const OOfn)(INT, CHAR *, CHAR *, CHAR *, CHAR *) = &Ofn;
-	INT nm = (**OOfn)(zq, qx, xv, vb, bn), *const Onm = &nm;
-	INCR(*(long long *)*(**QIIQ + 9));
-	return *Onm;
 }
 
 static int qEgen(qEcoT *C) {
@@ -228,7 +219,7 @@ static void qEvmRun(void) {
 				(*V).pc = qEDECB(qEprog, (*V).pc + 1);
 			break;
 		case qEOP_GEN:
-			if (NOT qEgen(Oco))
+			if (!qEgen(Oco))
 				longjmp(*Ojb, 0x2B);
 			INCR((**OOV).pc);
 			break;
@@ -275,7 +266,7 @@ static void srz3(void) {
 	double wd;
 	*OT0 = TM();
 	fp4m();
-	*((modefn *)*(***IllI + 34) + MODE_M3) = gq5;
+	*((modefn *)*(***IllI + 34) + MODE_M3) = ytsd;
 	subscribe("s", gq0, 0);
 	PR("\n=== run ===\n");
 	PR("d0=%s\n", (char *)*(OzO + 26));

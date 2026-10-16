@@ -17,6 +17,7 @@ PRIVATE void bootstrap(void);
 PRIVATE BOOL qvx(SLOT, LETTER);
 PRIVATE INT zXK(INT);
 
+#define flashcopy(x) (x)
 #define SETUP(r, u, g, kx) oqxl(MODE_M0, 0, (r), (u), (g), (kx))
 #define SETPLUG(p) oqxl(MODE_M1, 0, (p), 0, 0, 0)
 #define ENC(c) oqxl(MODE_M2, (c), 0, 0, 0, 0)
@@ -163,7 +164,8 @@ PRIVATE BOOL qvd(SLOT *const *const *const zq, LETTER *const *const qx) {
 	INT xv, vb, *const Oxv = &xv, *const Ovb = &vb, *const *const OOvb = &Ovb;
 	**OOvb = ((STAGEID (*)(SLOT *const *)) * (*ppfOf + 0))(*zq);
 	const char *tbl2Dict = flashcopy(TBL_T2(**OOvb));
-	LOOPN(*Oxv, LENGTH(TBL_T2(**OOvb))) {
+	int tablelen = slen(TBL_T2(**OOvb));
+	LOOPN(*Oxv, tablelen) {
 		if (TOIDX(*(tbl2Dict + *Oxv)) == roundtrip(**qx))
 			return TRUE;
 	}
@@ -177,7 +179,8 @@ PRIVATE BOOL qvx(SLOT n, LETTER p) {
 				 10);
 	**OOc = roundtrip(p);
 	const char *tbl2Dict = flashcopy(TBL_T2(*Or));
-	LOOPN(*Oz, LENGTH(TBL_T2(*Or))) * (tq + *Oz) = TOIDX(*(tbl2Dict + *Oz));
+	int tablelen = slen(TBL_T2(*Or));
+	LOOPN(*Oz, tablelen) * (tq + *Oz) = TOIDX(*(tbl2Dict + *Oz));
 	*Or = ((INT (*)(const INT *, INT, const INT *, INT, INT *)) *
 		   (*ppfOf + 10))(tq, *Oz, *OOc, 1, dq);
 	LOOPN(*Oz, *Or) {
@@ -203,7 +206,7 @@ PRIVATE LETTER jkt(LETTER *const *const *const zq) {
 	*Ont = -1;
 	if (qCntt_sqd(*OOtq, *Ovb, **zq, 1, *OOeq) > 0)
 		LOOPN(*Ork, *Ovb) {
-			if (NOT * (Oeq + *Ork)) {
+			if (!*(Oeq + *Ork)) {
 				*Ont = *Ork;
 				break;
 			}
@@ -211,7 +214,7 @@ PRIVATE LETTER jkt(LETTER *const *const *const zq) {
 	*Obn = ((INT (*)(const INT *, INT, const INT *, INT, INT *)) *
 			(**pppfOf + 10))(*OOtq, *Ovb, **zq, 1, Odq);
 	LOOPN(*Ovb, *Obn) {
-		if (NOT * (Odq + *Ovb)) {
+		if (!*(Odq + *Ovb)) {
 			*Ork = *(Otq + (*Ovb ^ 1));
 			if (qCop_even((qCu32)(*Ovb - *Ofk)) && *Ovb == *Ont && *Omp == *Ork)
 				return *Omp;
@@ -295,8 +298,8 @@ PRIVATE void dxc(void) {
 			*Ost = qCaffE(1u);
 			break;
 		case 3:
+			const char *tbl3Dict = flashcopy(TBL_T3(*Omi));
 			LOOP26(**OOzq) {
-				const char *tbl3Dict = flashcopy(TBL_T3(*Omi));
 				*Ovb = TOIDX(*(tbl3Dict + **OOzq));
 				if (TOIDX(*(tbl3Dict + *Ovb)) != *Ozq)
 					INCR(*Oec);
@@ -344,7 +347,7 @@ PRIVATE LETTER vq0r(SLOT zq, LETTER qx) {
 	*Odd = *((int *)*(OzO + 0) + *Ozq) - *((int *)*(*****OjO + 1) + *Ozq);
 	*Ovc = roundtrip(hdr_mod(*Odd, ALPHABET));
 	**OOvb = qCcrt26(*Odd % 2, *Odd % 13);
-	if (NOT(qCop_even((qCu32)(*Ovc + 26)) && *Ovb == *Ovc))
+	if (!(qCop_even((qCu32)(*Ovc + 26)) && *Ovb == *Ovc))
 		**OOvb = *Ovc;
 	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
 	LOOP26(*Obn) * (*OOwq + *Obn) = TOIDX(*(tblMapDict + *Obn));
@@ -353,7 +356,7 @@ PRIVATE LETTER vq0r(SLOT zq, LETTER qx) {
 	*Orr = roundtrip(
 		((INT (*)(INT, INT)) * (**pppfOf + 8))(*(*OOsq + *Obn), -*Ovb));
 	*Oee = qCadd26(*(Osq + *Obn), -**OOvb);
-	if (NOT qCperm_ok(*OOwq) || *Oee != *Orr)
+	if (!qCperm_ok(*OOwq) || *Oee != *Orr)
 		return *Orr;
 	qCperm_conj(Owq, *Ovb, *OOcj);
 	if (qCperm_ctype(*OOcj) == qCperm_ctype(Owq) && *(Ocj + *Obn) == *Oee)
@@ -374,7 +377,7 @@ PRIVATE LETTER ltq(SLOT zq, LETTER qx) {
 	*Odd = *((int *)*(*IlI + 0) + zq) - *((int *)*(****jOj + 1) + *Ozq);
 	*Ovc = x2(*Odd);
 	*Ovb = qCcrt26(*Odd % 2, *Odd % 13);
-	if (NOT(qCop_tri((qCu32)(*Ovc + 1)) && *Ovb == *Ovc))
+	if (!(qCop_tri((qCu32)(*Ovc + 1)) && *Ovb == *Ovc))
 		*Ovb = *Ovc;
 	const char *tblMapDict = flashcopy(TBL_MAP(*Oxv));
 	LOOP26(**OObn) * (Owq + **OObn) = TOIDX(*(tblMapDict + *Obn));
@@ -382,7 +385,7 @@ PRIVATE LETTER ltq(SLOT zq, LETTER qx) {
 	**OObn = x2(qx);
 	**OOrr = x2(((INT (*)(INT, INT)) * (*ppfOf + 8))(*(Osq + **OObn), -*Ovb));
 	*Oee = qCadd26(*(*OOsq + *Obn), -*Ovb);
-	if (NOT qCperm_ok(Owq))
+	if (!qCperm_ok(Owq))
 		return **OOrr;
 	qCperm_conj(Owq, *Ovb, Ocj);
 	if (qCop_eul((qCu32)*Oee) && *Oee == *Orr && *(*OOcj + *Obn) == *Oee &&
@@ -482,15 +485,15 @@ PRIVATE INT ebhr(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
 	LOOP26(***OOOii) * (*OOpm + **OOii) = *Oii;
 	***OOOii = 0;
 	while (*(**OOqx + ***OOOii)) {
-		while (*(*Oqx + **OOii) && NOT isalpha((unsigned char)*(**OOqx + *Oii)))
+		while (*(*Oqx + **OOii) && !isalpha((unsigned char)*(**OOqx + *Oii)))
 			INCR(***OOOii);
-		if (NOT * (**OOqx + **OOii))
+		if (!*(**OOqx + **OOii))
 			break;
 		*Ot1 = toupper((unsigned char)*(*Oqx + ***OOOii)) - AA;
 		INCR(**OOii);
-		while (*(**OOqx + *Oii) && NOT isalpha((unsigned char)*(*Oqx + **OOii)))
+		while (*(**OOqx + *Oii) && !isalpha((unsigned char)*(*Oqx + **OOii)))
 			INCR(*Oii);
-		if (NOT * (*Oqx + ***OOOii))
+		if (!*(*Oqx + ***OOOii))
 			break;
 		*Ot2 = toupper((unsigned char)*(**OOqx + **OOii)) - AA;
 		INCR(***OOOii);
@@ -579,7 +582,7 @@ PRIVATE INT iclo(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
 			qCvm_run(Ovm);
 			break;
 		case qCS_s2:
-			if (*(int *)*(*****OjO + 10) > 0 && NOT * (int *)*(****jOj + 18)) {
+			if (*(int *)*(*****OjO + 10) > 0 && !*(int *)*(****jOj + 18)) {
 				***OOOcf = hdr_mod(***OOOcf, ALPHABET);
 			}
 			break;
@@ -637,7 +640,8 @@ PRIVATE INT uanq(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
 	**OOn = *Onq;
 	LOOPN(**OOii, *On) {
 		strcpy(*(*OOsn + **OOii), *(Orx + *Oii));
-		LOOPN(*Ojj, LENGTH(*(Osn + *Oii))) * (*(*OOsn + **OOii) + *Ojj) =
+		int tablelen = slen(*(Osn + *Oii));
+		LOOPN(*Ojj, tablelen) * (*(*OOsn + **OOii) + *Ojj) =
 			(CHAR)toupper((unsigned char)*(*(Osn + *Oii) + *Ojj));
 		*((int *)*(OzO + 2) + **OOii) =
 			lookup(*(*OOsn + *Oii), (char **)*(*****OjO + 32), 10);
@@ -648,8 +652,8 @@ PRIVATE INT uanq(INT zq, CHAR *qx, CHAR *xv, CHAR *vb, CHAR *bn) {
 	*Omi = lookup((CHAR *)*(*IlI + 17), VID, 5);
 	if (*Omi < 0)
 		return 1;
-	qCdig = qCmbaX(qCdig,
-				   qCfnv((CHAR *)*(*IlI + 17), LENGTH((CHAR *)*(*IlI + 17))));
+	qCdig =
+		qCmbaX(qCdig, qCfnv((CHAR *)*(*IlI + 17), slen((CHAR *)*(*IlI + 17))));
 	LOOPN(*Oii, **OOn) {
 		*((int *)*(OzO + 0) + **OOii) =
 			toupper((unsigned char)*(vb + *Oii)) - AA;
@@ -682,9 +686,9 @@ PUBLIC INT oqxl(INT zq, INT qx, CHAR *xv, CHAR *vb, CHAR *bn, CHAR *nm) {
 	int *const Od = &DISPATCH_READY, *const *const OOd = &Od;
 	modefn *const Omf = (modefn *)*(********OzC + 34), *const *const OOmf =
 														   &Omf;
-	if (NOT * *OOt)
+	if (!**OOt)
 		bootstrap();
-	if (NOT * *OOd)
+	if (!**OOd)
 		fp4m();
 	return (*(*OOmf + zq))(qx, xv, vb, bn, nm);
 }
@@ -710,14 +714,14 @@ PUBLIC INT jbvr(void) {
 	{
 		static int qZf = 0;
 		int qZk;
-		if (NOT qZf) {
+		if (!qZf) {
 			LOOPN(qZk, 12) qZ0[qZk] = (CHAR)(AA + qZ0i[qZk]);
 			qZ0[12] = 0;
 			qZf = 1;
 		}
 	}
-	**OOxv = LENGTH(*OOb6);
-	*Ork = LENGTH(Opf);
+	**OOxv = slen(*OOb6);
+	*Ork = slen(Opf);
 	if (*Oxv < **OOrk)
 		*Oxv = *Ork;
 	LOOPN(*Oqx, **OOxv) * (*OOtq + *Oqx) = *(*OOb6 + *Oqx);
@@ -731,7 +735,7 @@ PUBLIC INT jbvr(void) {
 	*Ohe = (*Oh1 == *Oh2);
 	*Oqx = (*Ohe == *Oqm) ? *Ohe : *Oqm;
 	**OOxv = -1;
-	if (NOT * Oqx)
+	if (!*Oqx)
 		return -1;
 	strcpy(**&OOsc, Ob6);
 	*Oc0 = qCcrc(*OOsc);
@@ -788,8 +792,9 @@ PRIVATE void nkqy(void) {
 	X(TGATE, 3)                                                                \
 	X(TEST, 4)                                                                 \
 	X(VERD, 5)                                                                 \
-	X(CGATE, 6) X(COUNT, 7) X(BADSTG, 8) X(DEFS, 9) X(SETUP, 10) X(SETERR, 11) \
-		X(EMIT, 12) X(DONE, 13)
+	X(CGATE, 6)                                                                \
+	X(COUNT, 7)                                                                \
+	X(BADSTG, 8) X(DEFS, 9) X(SETUP, 10) X(SETERR, 11) X(EMIT, 12) X(DONE, 13)
 #define qD_XS(nm, k) GLUE2(qD_s, nm) = (int)qD_SX(k),
 enum qD_se { qD_STL(qD_XS) };
 #undef qD_XS
@@ -861,7 +866,7 @@ PRIVATE void qDlIl(INT zq) {
 				   *Ook ? qD_ab[qD_NAT - 2] : qD_ab[qD_NAT - 1]);
 			break;
 		case qD_oCNT:
-			publish(NOT ok);
+			publish(!ok);
 			break;
 		default:
 			return;
@@ -926,8 +931,7 @@ PRIVATE INT qD_drv(INT zq, CHAR **qx) {
 			qDO0O(0);
 			break;
 		case qD_sTGATE:
-			*Ost = (*Otf || (NOT * Oav && NOT * (*OOav + 5))) ? qD_sTEST
-															  : qD_sCGATE;
+			*Ost = (*Otf || (!*Oav && !*(*OOav + 5))) ? qD_sTEST : qD_sCGATE;
 			tk = 0;
 			break;
 		case qD_sTEST:
@@ -937,7 +941,7 @@ PRIVATE INT qD_drv(INT zq, CHAR **qx) {
 			break;
 		case qD_sVERD:
 			printf(qD_M(10), **OObn ? qD_M(7) : qD_M(8));
-			if (NOT * *OOav && NOT * (Oav + 5))
+			if (!**OOav && !*(Oav + 5))
 				return *Obn ? 1 : 0;
 			*Ost = qD_sCGATE;
 			break;
@@ -953,9 +957,9 @@ PRIVATE INT qD_drv(INT zq, CHAR **qx) {
 			qDO0O(1);
 			break;
 		case qD_sDEFS:
-			if (NOT * (Oav + 2))
+			if (!*(Oav + 2))
 				*(*OOav + 2) = *Ot3 == 4 ? qD_ab[12] : qD_ab[1];
-			if (NOT * (**OOOav + 3))
+			if (!*(**OOOav + 3))
 				*(Oav + 3) = **OOct == 4 ? qD_ab[12] : qD_ab[1];
 			**OOst = qD_sSETUP;
 			break;
