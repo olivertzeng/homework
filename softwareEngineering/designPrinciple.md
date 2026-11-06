@@ -15,6 +15,7 @@ Backwards Compatibility
 
 ISP: Interface Segregation Principle
 No interface for all
+So it's just LSP but for interfaces
 
 DIP: Dependency Inversion Principle
 # ❌
